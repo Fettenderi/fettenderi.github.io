@@ -6,6 +6,7 @@ taxonomies = [{ name = "tags" }]
 # base_url = "https://fettenderimakes.games"
 base_url = "https://fettenderi.github.io"
 
+
 compile_sass = true
 minify_html = true
 build_search_index = false
