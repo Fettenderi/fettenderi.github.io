@@ -4,6 +4,7 @@ taxonomies = [{ name = "tags" }]
 # See this for more options: https://github.com/not-matthias/apollo/blob/main/config.toml#L14
 
 base_url = "https://fettenderimakes.games"
+
 compile_sass = true
 minify_html = true
 build_search_index = false
