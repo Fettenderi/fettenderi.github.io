@@ -1,0 +1,29 @@
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
+# See this for more options: https://github.com/not-matthias/apollo/blob/main/config.toml#L14
+
+base_url = "https://fettenderimakes.games"
+compile_sass = true
+minify_html = true
+build_search_index = false
+
+[markdown]
+highlight_code = true
+
+[extra]
+toc = true
+theme = "auto"
+favicon = "/icon/favicon.svg"
+socials = [
+  { name = "linktree", url = "https://linktr.ee/fettenderi", icon = "linktree" },
+  { name = "itch.io", url = "https://fettenderi.itch.io", icon = "itchio" },
+  { name = "github", url = "https://github.com/Fettenderi", icon = "github" },
+  { name = "linkedin", url = "https://www.linkedin.com/in/marco-manganaro/", icon = "linkedin" },
+]
+menu = [
+    { name = "/home", url = "", weight = 1 },
+    { name = "/games", url = "/games", weight = 2 },
+    { name = "/about", url = "/about", weight = 3 },
+]
+
