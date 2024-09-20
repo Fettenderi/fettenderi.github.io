@@ -76,7 +76,7 @@ header .socials {
 }
 
 /* Mobile-specific adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;

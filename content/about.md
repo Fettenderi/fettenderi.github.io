@@ -1,6 +1,9 @@
 +++
 title = "About"
 path = "about"
+
+[extra]
+site_title = "Fettenderi: About"
 +++
 
 # Myself
@@ -22,6 +25,6 @@ Whether I'm commuting from university to home or studying, music is always a par
 # Contact
 
 You want to work with me? You can:
-- Dm me on discord as fettenderi
-- Message me on linkedin
-- Mail me at fettenderi.marco@gmail.com
+- Dm me on discord as 'fettenderi'
+- Message me on [linkedin](https://www.linkedin.com/in/marco-manganaro/)
+- Mail me at 'fettenderi.marco@gmail.com'

@@ -26,7 +26,18 @@
     {% endif %}
 
     {# Site title #}
-    {% set current_path = current_path | default(value="/") %}
+    <title>
+        {% if page.extra.site_title %} {{ page.extra.site_title }}
+        {% elif section.extra.site_title %} {{ section.extra.site_title }}
+        {% elif config.extra.site_title %} {{ config.extra.site_title }}
+
+        {% elif page.title %} {{ page.title }}
+        {% elif section.title %} {{ section.title }}
+        {% elif config.title %} {{ config.title }}
+        {% else %} Fettenderi {% endif %}
+    </title>
+
+    <!-- {% set current_path = current_path | default(value="/") %}
     {% if current_path == "/" %}
     <title>
         {{ config.title | default(value="Home") }}
@@ -62,7 +73,7 @@
          {% elif config.description %}
              <meta name="description" content="{{ config.description }}" />
          {% endif %}
-    {% endif %}
+    {% endif %} -->
 
     {# Favicon #}
     {% if config.extra.favicon %}

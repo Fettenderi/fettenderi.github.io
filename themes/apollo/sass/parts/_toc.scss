@@ -1,5 +1,10 @@
 .toc-container {
   .toc-title {
+
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 2em;
+
     cursor: pointer;
     position: relative;
     padding-left: 35px; // Space for the arrow

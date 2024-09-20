@@ -5,7 +5,7 @@ taxonomies = [{ name = "tags" }]
 
 # base_url = "https://fettenderimakes.games"
 base_url = "https://fettenderi.github.io"
-
+title = "Fettenderi"
 
 compile_sass = true
 minify_html = true
@@ -16,8 +16,8 @@ highlight_code = true
 
 [extra]
 toc = true
-theme = "auto"
-favicon = "/icon/favicon.svg"
+theme = "toggle"
+favicon = "/icon/favicon.png"
 socials = [
   { name = "linktree", url = "https://linktr.ee/fettenderi", icon = "linktree" },
   { name = "itch.io", url = "https://fettenderi.itch.io", icon = "itchio" },
@@ -25,8 +25,7 @@ socials = [
   { name = "linkedin", url = "https://www.linkedin.com/in/marco-manganaro/", icon = "linkedin" },
 ]
 menu = [
-    { name = "/home", url = "", weight = 1 },
-    { name = "/games", url = "/games", weight = 2 },
-    { name = "/about", url = "/about", weight = 3 },
+    { name = "/games", url = "/games", weight = 1 },
+    { name = "/about", url = "/about", weight = 2 },
 ]
 

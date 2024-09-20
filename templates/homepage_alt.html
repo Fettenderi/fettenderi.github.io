@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "cards_alt.html" as cards_alt %}
+
+{% block main_content %}
+    <main>
+        <article>
+            <section id = "home" class="body">
+                <!-- da 808px di larghezza diventa versione telefono -->
+                <div id = "text">
+                    {{post_macros::page_header(title=section.title)}}
+                    {{ section.content | safe }}
+                </div>
+
+                <div id = "games">
+                    {% if section.extra.section_path -%}
+                        {% set section = get_section(path=section.extra.section_path) %}
+                        {%- set show_pages = section.pages -%}
+
+                        {{ cards_alt::cards_posts(pages=show_pages) }}
+
+                    {% endif -%}
+                </div>
+            </section>
+        </article>
+    </main>
+
+{% endblock main_content %}

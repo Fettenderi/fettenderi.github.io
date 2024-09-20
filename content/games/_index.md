@@ -1,6 +1,8 @@
 +++
 title = "Games"
-sort_by = "weight"
+sort_by = "date"
 template = "cards.html"
-paginate_reversed = false
+
+[extra]
+site_title = "Fettenderi: Games"
 +++

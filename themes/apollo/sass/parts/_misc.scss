@@ -124,6 +124,14 @@ del {
   }
 }
 
+#card-image-links {
+  border-bottom: none;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
 .MathJax_Display,
 .MJXc-display,
 .MathJax_SVG_Display {
