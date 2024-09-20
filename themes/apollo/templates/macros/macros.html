@@ -85,9 +85,14 @@
     {% endif -%}
 {% endmacro tags %}
 
-{% macro page_header(title) %}
+{% macro page_header(title, image="") %}
     <div class="page-header">
         {{ title }}<span class="primary-color" style="font-size: 1.6em">.</span>
+
+        {% if image %}
+            <img class="page-image" alt={{ image }} src="{{ get_url(path=image) }}"/>
+        {% endif %}
+
     </div>
 {% endmacro content %}
 
@@ -107,7 +112,14 @@
     <article>
         <div class="title">
             {#<h1 class="title">{{ page.title }}</h1>#}
-            {{ post_macros::page_header(title=page.title) }}
+
+            {% if page.extra.local_image %}
+                {{ post_macros::page_header(title=page.title) }}
+                <!-- {{ post_macros::page_header(title = page.title, image = page.extra.local_image) }} -->
+            {% else %}
+                {{ post_macros::page_header(title=page.title) }}
+            {% endif %}
+
 
                 <div class="meta">
                     {% if page.date %}

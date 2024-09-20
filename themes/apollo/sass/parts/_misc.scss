@@ -62,6 +62,13 @@ time {
   color: grey;
 }
 
+.text-button {
+  border: solid ;
+  border-width: 0.3rem;
+  border-color: var(--primary-color);
+  padding: 0.6rem 5rem 0.6rem 5rem;
+}
+
 /* Remove post list padding */
 .list>ul {
   margin: 0;
