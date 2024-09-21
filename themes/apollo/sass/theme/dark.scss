@@ -1,29 +1,32 @@
-$bg-0: #121212;
+$page-bg: #01010B;
 
 // Dark theme needs a bigger contrast compared to the white theme.
-$bg-1: lighten($bg-0, 5%);
-$bg-2: lighten($bg-1, 10%);
-$bg-3: lighten($bg-0, 2%);
+$card-bg: #0e1123;
+$border-bg: #050617;
+$footer-bg: #050617;
 
-$text-0: lighten($bg-0, 87%);
-$text-1: lighten($bg-0, 60%);
+$text: #f8eed3;
+$hover: #01010B;
+
+$primary-color: #EF9A03;
+$accent-color: #e3a049;
 
 :root.dark {
-  --text-0: #{$text-0};
-  --text-1: #{$text-1};
+  --text-0: #{$text};
+  --text-1: #{$text};
 
-  --bg-0: #{$bg-0};
-  --bg-1: #{$bg-1};
-  --bg-2: #{$bg-2};
-  --bg-3: #{$bg-3};
+  --bg-0: #{$page-bg};
+  --bg-1: #{$card-bg};
+  --bg-2: #{$border-bg};
+  --bg-3: #{$footer-bg};
 
   --border-color: var(--bg-2);
 
-  --primary-color: #ef5350;
-  --secondary-color: #ef5350;
-  --hover-color: #{$bg-0};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$accent-color};
+  --hover-color: #{$hover};
 
-  .social>img {
+  .social-icon {
     filter: invert(1);
   }
 }

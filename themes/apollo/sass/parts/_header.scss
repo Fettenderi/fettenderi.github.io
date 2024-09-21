@@ -69,9 +69,9 @@ header .socials {
     padding: 2px;
 }
 
-.social>img {
+.social-icon {
     border: unset;
-    width: 24px;
+    width: 5rem;
     height: 24px;
 }
 
@@ -105,59 +105,29 @@ header .socials {
     border: unset;
 }
 
+@function str-repeat($n) {
+    $result: ''; // Inizializza una stringa vuota
+    @for $i from 1 through $n {
+      $result: $result + '#'; // Aggiunge un '#' per ogni ciclo
+    }
+    @return $result;
+  }
 
-h1 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-top: 2em;
+@for $i from 1 through 6 {
+    h#{$i} {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        margin-top: 2em;
+    }
+
+    h#{$i}::before {
+        color: var(--primary-color);
+        content: str-repeat($i) + ' ';
+    }
 }
 
-h2 {
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-top: 2em;
-}
-
-h3 {
-    color: var(--primary-color);
-    font-size: 1.4rem;
-    margin-top: 2em;
-}
-
-h4,
-h5,
-h6 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-top: 2em;
-}
-
-h1::before {
-    color: var(--primary-color);
-    content: "# ";
-}
-
-h2::before {
-    color: var(--primary-color);
-    content: "## ";
-}
-
-h3::before {
-    color: var(--primary-color);
-    content: "### ";
-}
-
-h4::before {
-    color: var(--primary-color);
-    content: "#### ";
-}
-
-h5::before {
-    color: var(--primary-color);
-    content: "##### ";
-}
-
-h6::before {
-    color: var(--primary-color);
-    content: "###### ";
+@for $i from 1 through 3 {
+    h#{$i} {
+        font-size: 1.4rem + 0.2 * $i;
+    }
 }
