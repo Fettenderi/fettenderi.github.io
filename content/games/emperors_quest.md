@@ -20,7 +20,10 @@ If you want to see Kendal's reaction to the game [click here](https://www.youtub
 
 For my longplay of the game with no cuts [click here](https://www.youtube.com/watch?v=).
 
+<div class = "gallery">
 {{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
 {{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
 {{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
 {{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
+</div>
+

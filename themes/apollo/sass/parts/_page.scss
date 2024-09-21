@@ -1,0 +1,19 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-image {
+    flex-grow: 1;
+    border-color: var(--text-0);
+    border-radius: 5px;
+    margin: 0.2rem;
+}
+
+.text-button {
+    border: solid;
+    border-width: 100%;
+    border-color: var(--primary-color);
+    padding: 0.6rem 15% 0.6rem 15%;
+}
