@@ -4,9 +4,10 @@
     justify-content: space-between;
 }
 
+.gallery-gif,
 .gallery-image {
     flex-grow: 1;
-    border-color: var(--text-0);
+    border-color: transparent;
     border-radius: 5px;
     margin: 0.2rem;
 }

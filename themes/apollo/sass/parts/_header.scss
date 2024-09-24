@@ -129,6 +129,6 @@ header .socials {
 
 @for $i from 1 through 3 {
     h#{$i} {
-        font-size: 1.4rem + 0.2 * $i;
+        font-size: 1.8rem - 0.2 * $i;
     }
 }

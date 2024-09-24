@@ -6,6 +6,7 @@ weight = 5
 
 [extra]
 local_image = "/games/punch_line.png"
+banner_image = "/games/punch_line.png"
 +++
 
 This is a game project, done solely by me in two months, it was commissioned to me by Kendal, I'm not sharing it publicly to avoid a copyright violation from Mojang Studios. That said, I'll be glad to share with you the design details, the graphics and a full gameplay of said game.
@@ -21,9 +22,9 @@ If you want to see Kendal's reaction to the game [click here](https://www.youtub
 For my longplay of the game with no cuts [click here](https://www.youtube.com/watch?v=).
 
 <div class = "gallery">
-{{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
-{{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
-{{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
-{{ resize_image(path="content/games/emperors_quest/no_brake.png", width=230, height=200, op="fill")}}
+{{ resize_image(path="static/images/emperors_quest/image1.png", width=230, height=200, op="fill")}}
+{{ resize_image(path="static/images/emperors_quest/image2.png", width=230, height=200, op="fill")}}
+{{ resize_image(path="static/images/emperors_quest/image3.png", width=230, height=200, op="fill")}}
+{{ resize_image(path="static/images/emperors_quest/image4.png", width=230, height=200, op="fill")}}
 </div>
 
