@@ -4,14 +4,14 @@ title = "Emperor's Quest: Gameplay Design"
 
 # Items:
 
-While searching ideas for the combat system the first days of development, I was inspired by Minecraft 1.8 PVP. Its main feature being the usage of the sword and other tools to slow donw or annoy the player, like the flint & steel or the fishing rod.
+While searching ideas for the combat system the first days of development, I was inspired by Minecraft 1.8 PVP. Its main feature being the usage of the sword and other tools to slow down or annoy the player, like the flint & steel or the fishing rod.
 
 Following that idea I started sketching some of the uses for these items:
 
 ## Flint & steel:
 {{ resize_image(path="static/images/emperors_quest/flint_n_steel.png", width=100, height=100, op="fit") }}
 
-<p>Used to start fires, ignite TNTs, damage close up enemies and deactivate magnets. This elegantly encompasses a lot of features into a single item, making it a useful addition to your inventory. It also adds a risk reward-machanic, there is a damage boost if the enemy is hit using the flint & steel from up close.</p>
+<p>Used to start fires, ignite TNTs, damage close up enemies and deactivate magnets. This elegantly encompasses a lot of features into a single item, making it a useful addition to your inventory. It also adds a risk reward-mechanic, there is a damage boost if the enemy is hit using the flint & steel from up close.</p>
 
 <div class = "gallery" style = "display:inline-flex">
 <img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDlzY3I2NjIxdWw4YnduOTlod3M2eWpzazU3czd5MHVwZm9uZmgyaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MA4XkcSHj0yzIpeiqZ/giphy.gif">
@@ -24,7 +24,7 @@ Following that idea I started sketching some of the uses for these items:
 ## Fishing rod:
 {{ resize_image(path="static/images/emperors_quest/fishing_rod.png", width=100, height=100, op="fit") }}
 
-<p>I wanted this item to be used as a grappling hook, used even to bring enemies closer, to let them hang high and then let them take fall damage.
+<p>I wanted this item to be used as a grappling hook, used even to bring enemies closer, making them hang high and then let them take fall damage.
 
 But in the end I scrapped this idea to make space for a more elegant and more appealing idea. This free movement mechanic took form into the Amulet and all the Supercharged Redstone mechanic.</p>
 
@@ -39,7 +39,7 @@ It was replaced with the Controller to make it more in line with the other items
 
 Another very important, but also silent gameplay mechanic are all the redstone contraptions. They make possible all of the complex features such as: moving platforms, dispensers, TNTs and also the final bossfight.
 
-Redstone is implemented in Engine using 2 kind of object:
+Redstone is implemented in Engine using 2 kinds of object:
 
 ## Sender
 {{ resize_image(path="static/images/emperors_quest/sender.png", width=100, height=100, op="fit") }}

@@ -14,6 +14,6 @@ My primary responsibility was implementing the SFX and OST using FMOD. Having wo
 
 During the whole two days of development I also helped the Game Designer suggesting new mechanics to work on.
 
-If you want to try it, the game is really fun to play. I would recommend playing it with a friend to make the experience more ilarious.
+If you want to try it, the game is really fun to play. I would recommend playing it with a friend to make the experience more hilarious.
 
 {{ add_button(path="https://fettenderi.itch.io/punch-line", text="Try it!") }}

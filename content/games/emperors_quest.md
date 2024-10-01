@@ -9,9 +9,9 @@ local_image = "/games/punch_line.png"
 banner_image = "/games/punch_line.png"
 +++
 
-This is a game project, done solely by me in two months, it was commissioned to me by Kendal, I'm not sharing it publicly to avoid a copyright violation from Mojang Studios. That said, I'll be glad to share with you the design details, the graphics and a full gameplay of said game.
+This is a game project, created solely by me in two months, it was commissioned to me by Kendal, I am not sharing it publicly to avoid potential copyright violations from Mojang Studios. That said, I would be glad to share the design details, graphics, and a complete gameplay of the game.
 
-The analysis of the game is divided in 4 core parts:
+The analysis of the game is divided into 4 core parts:
 - [Level Design](/games/emperors_quest/level-design)
 - [Gameplay Design](/games/emperors_quest/gameplay-design)
 - [System Design](/games/emperors_quest/system-design)

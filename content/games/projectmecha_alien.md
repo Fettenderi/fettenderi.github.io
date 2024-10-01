@@ -21,7 +21,7 @@ By the time we submitted the game, we had zero hours of sleep, only three enemie
 
 Through this experience, I learned a tough lesson: beware of scope creep, as it can turn a good idea into a complete mess.
 
-Despite the challenges, I really enjoyed working with my teammate [Unconcious Motifs](https://unconscious-motifs.itch.io). He created an incredible dynamic OST for the game, which, along with the buildings I designed as props, were probably the best parts of the project.
+Despite the challenges, I really enjoyed working with my teammate [Unconscious Motifs](https://unconscious-motifs.itch.io). He created an incredible dynamic OST for the game, which, along with the buildings I designed as props, were probably the best parts of the project.
 
 <div class = "gallery">
 {{ resize_image(path="static/images/projectmecha_alien/image2.png", width=230, height=200, op="fill")}}
@@ -30,6 +30,6 @@ Despite the challenges, I really enjoyed working with my teammate [Unconcious Mo
 {{ resize_image(path="static/images/projectmecha_alien/image.png", width=230, height=200, op="fill")}}
 </div>
 
-The game is rough around the edges but it's still playable, give it a try.
+The game is rough around the edges, but it's still playable, give it a try.
 
 {{ add_button(path="https://fettenderi.itch.io/projectmecha-alien", text="Try it!") }}

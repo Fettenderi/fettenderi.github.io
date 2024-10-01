@@ -8,7 +8,7 @@ title = "Emperor's Quest: System Design"
 
 The hordes system went through many different iterations.
 
-The first concept was inspired by Dream Luigi of Mario & Luigi: Dream Team Bros. and by some Clank minigame of the Ratchet and Clank saga.
+The first concept was inspired by Dream Luigi of Mario & Luigi: Dream Team Bros. and by a Clank minigame of the Ratchet and Clank saga.
 
 <div class = "gallery">
 <img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXk4Y2Z1c3IyeXl3ZnJrdXVyc3g4M2RmN2xjNHJqaGx4ZjJpajQ0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tgwsXavtMuzzd2OvBn/giphy.gif">
@@ -23,11 +23,11 @@ Maybe with more development time I would have made the Giant Chicken Form the wa
 
 ## Final Design:
 
-The final version of the Controller is based solely on the Leader-Follower Mode. It works through a Singleton, the HiveMind that is being controlled by the HiveController. The HiveMind than relays all its inputs to the available leaders and they do the same with their followers.
+The final version of the Controller is based solely on the Leader-Follower Mode. It works through a Singleton, the HiveMind that is being controlled by the HiveController. The HiveMind then relays all its inputs to the available leaders and they do the same with their followers.
 
 {{ resize_image(path="static/images/emperors_quest/hive_diagram.png", width=1000, height=1000, op="fit") }}
 
-An HiveMember can change Behaviour at any time with any other Behaviour using common methods.
+A HiveMember can change Behaviour at any time with any other Behaviour using common methods.
 
 ``` gd, linenos
 class_name HiveBehaviour
