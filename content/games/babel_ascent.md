@@ -8,14 +8,22 @@ weight = 6
 local_image = "/games/babel_ascent.png"
 babel = true
 +++
+<div class = "gallery">
+<iframe width="400" height="225" style="padding-bottom: 1em;" src="https://www.youtube.com/embed/gEMYtLm-8uY?si=rjLIaHoLB0D_y3Nd" title="Babel Ascent Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="400" height="225"src="https://www.youtube.com/embed/3gbVwwEfuj0?si=v1FE2TWxUBpF8j74" title="Babel Ascent Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 After working on a few small projects in VR, I wanted to create an actual game using my acquired knowledge. So [UnconsciousMotifs](https://unconscious-motifs.itch.io), [BatFerro](https://itch.io/profile/andrea-ferretti) and I were full of energy to start working on this project.
 
 # The idea
-The game was developed for the [1-BIT JAM #4](https://itch.io/jam/1-bit-jam-4) and the main theme was Tower, so the first thing that came to mind was a tower defense. To fully embrace the theme, we decided to have the tower's lenght upgradable, this led us to the idea of the Tower of Babel, and from there, biblically accurate angels became an obvious choice.
+The game was developed for the [1-BIT JAM #4](https://itch.io/jam/1-bit-jam-4) and the main theme was Tower, so the first thing that came to mind was a tower defense. To fully embrace the theme, we decided to have the tower's height upgradable, this led us to the idea of the Tower of Babel, and from there, biblically accurate angels became an obvious choice.
 
 # Aesthetics
 To quickly create models while also achieving a unique art style, I worked on a dithering shader, heavily inspired by Return of the Obra Dinn, though not quite at the same level. I implemented two GLSL shaders using the new CompositorEffect feature of Godot 4.3.
+
+<div class = "gallery">
+{{ resize_image(path="static/images/babel_ascent/aesthetics.png", width=1030, height=500, op="fill")}}
+</div>
 
 The first shader was needed for the dithering and edge detection.
 
@@ -143,41 +151,32 @@ Initially, we had the cannon and the crossbow in mind as weapons, and the player
 
 The cannon deals a huge amount of damage, but charging it is time-consuming. The crossbow is easy to use for long-range attacks but deals low damage. While working on that, I came up with the idea of the harp, a fun and unique weapon. When all strings are touched in the correct order a note is shot. It's a short-range weapon that deals decent damage.
 
-// Cannon, Crossbow and Harp gifs
 <div class = "gallery">
-<img class = "gallery-gif" src="https://media.giphy.com/media/3BBENHvjEY7hDGveFk/giphy.gif">
-<img class = "gallery-gif" src="https://media.giphy.com/media/3BBENHvjEY7hDGveFk/giphy.gif">
-<img class = "gallery-gif" src="https://media.giphy.com/media/3BBENHvjEY7hDGveFk/giphy.gif">
+{{ resize_image(path="static/images/babel_ascent/0_94.jpg", width=1000, height=1000, op="fill")}}
+{{ resize_image(path="static/images/babel_ascent/0_97.jpg", width=1000, height=1000, op="fill")}}
+{{ resize_image(path="static/images/babel_ascent/0_93.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
 After some time spent fixing bugs and other mechanics, we introduced close-range weapons, such as the brick, which can be thrown and deals low damage, and the hammer, which is also throwable and can be used for long-range attacks. However, aiming is a bit difficult in a VR game, so to reward the player when thay hit an enemy with it we created an upgraded version of the hammer. When an enemy is hit, all enemies within a certain distance from it get stunned for a short time.
 
-// Hammer melee and hammer stunning enemies
 <div class = "gallery">
-<img class = "gallery-gif" src="https://media.giphy.com/media/3BBENHvjEY7hDGveFk/giphy.gif">
-<img class = "gallery-gif" src="https://media.giphy.com/media/3BBENHvjEY7hDGveFk/giphy.gif">
+{{ resize_image(path="static/images/babel_ascent/0_92.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
 # The Lurking Merchant
 
 We wanted a mysterious-looking figure to sell you all the weapons and upgrades, to reinforce the theme of a corrupted ascent. He comes in between fights and will offer the player different items that can be purchased using orbs of light dropped by the enemies. 
 
-{{ resize_image(path="static/images/emperors_quest/surfaces_tooltip1.png", width=550, height=350, op="fit") }}
-
-// Merchant scene with items (png)
 <div class = "gallery">
-<img class = "gallery-gif" src="https://media.giphy.com/media/3BBENHvjEY7hDGveFk/giphy.gif">
+{{ resize_image(path="static/images/babel_ascent/0_98.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
 When an item is chosen, light will be removed from the scale and the merchant will let you know he's ready to seal the deal through a handshake.
 
-// Merchant offering hand (gif)
 <div class = "gallery">
-<img class = "gallery-gif" src="https://media.giphy.com/media/3BBENHvjEY7hDGveFk/giphy.gif">
+{{ resize_image(path="static/images/babel_ascent/0_99.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
-For the merchant [UnconsciousMotifs](https://unconscious-motifs.itch.io) composed a calmer and slowed down version of the main gameplay ost, removing the drum machine and other upbeat features to reinforce the shadiness of this figure.
-
-// Music sample of the three levels
+If you have a VR headset and at least a GeForce GTX 1660 Ti you can run it!
 
 {{ add_button(path="https://fettenderi.itch.io/babel-ascent", text="Try it!") }}
