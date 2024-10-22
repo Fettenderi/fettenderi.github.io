@@ -16,8 +16,9 @@ function toggleTheme() {
 }
 
 function updateItemToggleTheme() {
-    let mode = getSavedTheme();
+    setTheme("dark");
 
+    let mode = getSavedTheme();
     const darkModeStyle = document.getElementById("darkModeStyle");
     if (darkModeStyle) {
         darkModeStyle.disabled = (mode === "light");
@@ -38,6 +39,7 @@ function updateItemToggleTheme() {
         htmlElement.classList.remove("dark")
         htmlElement.classList.add("light")
     }
+    
 }
 
 function getSavedTheme() {

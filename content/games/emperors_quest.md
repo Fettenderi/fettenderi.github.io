@@ -5,8 +5,7 @@ date = "2024-05-27"
 weight = 5
 
 [extra]
-local_image = "/games/punch_line.png"
-banner_image = "/games/punch_line.png"
+local_image = "/games/emperors_quest.png"
 +++
 
 This is a game project, created solely by me in two months, it was commissioned to me by Kendal, I am not sharing it publicly to avoid potential copyright violations from Mojang Studios. That said, I would be glad to share the design details, graphics, and a complete gameplay of the game.
@@ -18,8 +17,6 @@ The analysis of the game is divided into 4 core parts:
 - [Engine Designing Tools](/games/emperors_quest/engine-tools)
 
 If you want to see Kendal's reaction to the game [click here](https://www.youtube.com/watch?v=2S3NR6Hu13Y).
-
-For my longplay of the game with no cuts [click here](https://www.youtube.com/watch?v=).
 
 <div class = "gallery">
 {{ resize_image(path="static/images/emperors_quest/image1.png", width=230, height=200, op="fill")}}

@@ -1,0 +1,20 @@
+$black: #2A2A2B;
+$white: #F7EEDC;
+
+:root.dark {
+  --text-0: #{$white};
+  --text-1: #{$white};
+  --primary-color: #{$white};
+  --secondary-color: #{$white};
+
+  --bg-0: #{$black};
+  --bg-1: #{$black};
+  --bg-2: #{$black};
+  --bg-3: #{$black};
+  --border-color: #{$black};
+  --hover-color: #{$black};
+
+  .social-icon {
+    filter: invert(1);
+  }
+}

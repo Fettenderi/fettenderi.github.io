@@ -152,6 +152,14 @@
     <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
 
 
+    {% if page.extra.babel %}
+
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/babel.css') }}" />
+    <script src={{ get_url(path="js/themetoggle.js") }}></script>
+    <script>setTheme("babel");</script>
+
+    {% else %}
+
     {% set theme = config.extra.theme | default(value="toggle") %}
     {% if theme == "dark" %}
         <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" />
@@ -182,6 +190,10 @@
     {% else %}
         <script>setTheme(getSavedTheme());</script>
     {% endif %}
+
+    {% endif %}
+
+
 
     <link rel="stylesheet" type="text/css" media="screen" href={{ get_url(path="main.css") }} />
 
