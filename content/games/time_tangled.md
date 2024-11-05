@@ -8,11 +8,14 @@ weight = 2
 tags=["godot-engine", "solo", "bullet-hell"]
 local_image = "/games/time_tangled.png"
 +++
+<div class = "gallery">
+<iframe width="400" height="225" src="https://www.youtube.com/embed/rH-SM4XfNYA?si=nbVSHw2G1axhkvUS" title="Time Tangled Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-With another year's worth of experience watching tutorials on Youtube and an entire week to work on the project, I was prepared to create a really nice bullet hell.
+This is my second game, developed over the course of a week. I focused heavily on enhancing its visual appeal and crafting an engaging main game loop to keep players entertained.
 
-I really liked how the game turned out, it has power-ups, variety of enemies and bosses. The only thing I would change is polish, I would add way more particles, squash the player and all those really juicy things that make a cool game a really nice one.
+I’m proud of how the game turned out, complete with power-ups, a diverse range of enemies, and challenging boss fights. If I were to refine it further, I'd focus on polish, adding more particle effects, enhancing character animations, and incorporating those extra touches that elevate a game from good to great.
 
-Another thing I really like is the scoring system, it gives you a constant incentive to push your high score forward. I also added a little gift if you can beat my personal best of 52000! Why don't you try to beat it ;).  
+One feature I particularly enjoyed designing was the scoring system, which constantly encourages players to push for a higher score. And, for those up to the challenge, there’s a special reward for anyone who can surpass my personal best of 59,610. Give it a try if you're up for it!
 
 {{ add_button(path="https://fettenderi.itch.io/time-tangled", text="Try it!") }}

@@ -5,7 +5,7 @@ date = "2024-05-27"
 weight = 5
 
 [extra]
-tags=["godot-engine", "solo", "gameplay design", "system design"]
+tags=["godot-engine", "solo", "gameplay-design", "system-design"]
 local_image = "/games/emperors_quest.png"
 +++
 

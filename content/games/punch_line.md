@@ -5,9 +5,12 @@ date = "2024-01-28"
 weight = 4
 
 [extra]
-tags=["unity-engine", "team","junior programmer", "typing"]
+tags=["unity-engine", "team","junior-programmer", "typing"]
 local_image = "/games/punch_line.png"
 +++
+<div class = "gallery">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cw_MdH--ocQ?si=lVT_cb-UJ5Yq3jRp" title="Punch Line Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 Punch Line was the first game I worked on as a Junior Game Programmer, using an engine I wasn't familiar with: Unity. I'd always kept my distance from Unity, despite watching many tutorials and trying the engine a few times, it just never clicked for me. However, after observing an experienced user work with it for a few hours, I was able to contribute to various parts of the project.
 

@@ -6,7 +6,7 @@ weight = 6
 
 [extra]
 local_image = "/games/babel_ascent.png"
-tags=["godot-engine", "team", "lead designer", "technical gameplay designer", "vr", "shader"]
+tags=["godot-engine", "team", "lead-designer", "technical-gameplay-designer", "vr", "shader"]
 babel = true
 +++
 <div class = "gallery">

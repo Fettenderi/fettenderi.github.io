@@ -5,19 +5,17 @@
     <main>
         <article>
             <section id = "home" class="body">
-                <div id = "text">
+                <i id = "text">
                      {{ section.content | safe }}
-                </div>
-
-                <div id = "games">
-                    {% if section.extra.section_path -%}
-                        {% set section = get_section(path=section.extra.section_path) %}
-                        {%- set show_pages = section.pages -%}
-
+                </i>
+                
+                {% if section.extra.section_path -%}
+                    {% set section = get_section(path=section.extra.section_path) %}
+                    {%- set show_pages = section.pages -%}
+                    <div id = "games">
                         {{ cards::cards_posts(pages=show_pages) }}
-
-                    {% endif -%}
-                </div>
+                    </div>
+                {% endif -%}
             </section>
         </article>
     </main>

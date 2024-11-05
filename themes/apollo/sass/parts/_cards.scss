@@ -1,16 +1,18 @@
 .cards {
-    display: grid;
-    grid-template-rows: auto;
-    gap: 24px;
-    padding: 12px 0;
+    display: flex;              /* Usa flexbox */
+    flex-wrap: wrap;           /* Permetti il wrap per le cards */
+    gap: 24px;                 /* Spaziatura tra le cards */
+    justify-content: center;    /* Centra le cards orizzontalmente */
 }
 
 .card {
-    min-height: 100px;
-    background: var(--bg-1);
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    overflow: hidden;
+    flex: 1 0 400px;           /* Non far crescere o restringere le cards, larghezza fissa di 200px */
+    max-width: 600px;          /* Limita la larghezza massima delle cards */
+    min-height: 100px;          /* Limita la larghezza massima delle cards */
+    background: var(--bg-1);   /* Sfondo */
+    border: 2px solid var(--border-color); /* Bordo */
+    border-radius: 10px;       /* Angoli arrotondati */
+    overflow: hidden;          /* Nasconde il contenuto in eccesso */
 }
 
 .card-info {
@@ -18,7 +20,7 @@
 }
 
 .card-title {
-    white-space: nowrap;
+    // white-space: nowrap;
     font-size: 1.5rem;
 }
 

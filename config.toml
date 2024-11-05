@@ -20,7 +20,7 @@ theme = "toggle"
 favicon = "/icon/favicon.png"
 socials = []
 menu = [
-    { name = "/cv", url = "/cv", weight = 2 },
+#    { name = "/cv", url = "/cv", weight = 2 },
     { name = "/mail", url = "mailto:marco.manganaro03@gmail.com", weight = 2 },
     { name = "/linkedin", url = "https://www.linkedin.com/in/marco-manganaro/", weight = 2 },
     { name = "/github", url = "https://github.com/Fettenderi", weight = 2 },

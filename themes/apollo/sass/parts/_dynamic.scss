@@ -1,3 +1,4 @@
+
 html {
     font-size: calc(16px + (18 - 16) * ((100vw - 640px) / (960 - 640)));
 }
@@ -45,6 +46,7 @@ html {
         align-items: center;
         justify-content: center;
     }
+
 }
 
 @media all and (min-width: 640px) {

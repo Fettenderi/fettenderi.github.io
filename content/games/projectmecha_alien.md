@@ -5,7 +5,7 @@ date = "2023-07-20"
 weight = 3
 
 [extra]
-tags=["godot-engine", "team", "3d", "technical designer"]
+tags=["godot-engine", "team", "3d", "technical-designer"]
 local_image = "/games/projectmecha_alien.png"
 ignore = true
 +++
