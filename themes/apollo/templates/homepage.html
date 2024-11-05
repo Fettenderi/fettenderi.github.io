@@ -14,7 +14,6 @@
                         {% set section = get_section(path=section.extra.section_path) %}
                         {%- set show_pages = section.pages -%}
 
-                        {{ cards::cards_posts(pages=show_pages) }}
 
                     {% endif -%}
                 </div>
