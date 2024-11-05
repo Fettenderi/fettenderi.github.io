@@ -21,21 +21,6 @@
                     {% endif %}
                 </h1>
 
-                <div class="card-tags">
-                {% if page.extra.tags %}
-                    {% set tags = page.extra.tags%}
-                    {% for tag in tags %}
-                        <strong class="card-tag" style="background-color: var(--card-tags-bg-1);">
-                            #{{ tag }}
-                        </strong>
-                    {% endfor %}
-                {% endif %}
-                </div>
-                <!-- <div class="card-description">
-                    {% if page.description %}
-                        {{ page.description }}
-                    {% endif %}
-                </div> -->
             </div>
         </div>
         {% endif %}
