@@ -1,7 +1,7 @@
 +++
 title = "Games"
 sort_by = "date"
-template = "cards.html"
+template = "homepage.html"
 
 [extra]
 site_title = "Fettenderi: Games"
