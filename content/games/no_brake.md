@@ -5,7 +5,9 @@ date = "2020-11-15"
 weight = 1
 
 [extra]
+tags=["godot-engine", "solo", "3d"]
 local_image = "/games/no_brake.png"
+ignore = true
 +++
 
 This is my first ever attempt at videogame development, before this I only followed some tutorials about the Godot Engine and Blender.

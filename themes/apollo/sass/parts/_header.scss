@@ -1,8 +1,29 @@
+#title {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+#description {
+    font-size: 0.65em;
+    letter-spacing: 1px;
+    padding-top: 10px;
+}
+
+nav {
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+#menu-item {
+    margin-left: 0.5em;
+    display: inline-block;
+}
+
 .page-header {
     font-size: 2.5em;
     line-height: 100%;
     font-family: var(--header-font);
-    margin: 3rem 0px 2rem 0px;
+    margin: 1rem 0px 1rem 0px;
 }
 
 .centered-header {
@@ -21,7 +42,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1em 0;
+    padding: 4em 0 1em 0;
 }
 
 header .main {
@@ -31,7 +52,7 @@ header .main {
     justify-content: space-between;
     align-items: flex-start;
     gap: 12px;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
 
     /* Otherwise header and menu is too close on small screens*/
     margin-bottom: 5px;
@@ -74,19 +95,6 @@ header .socials {
     border: unset;
     width: 5rem;
     height: 24px;
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 1em 0;
-    }
-
-    header .main a {
-        font-size: 20px;
-    }
 }
 
 .meta {

@@ -1,35 +1,44 @@
-{% extends "base.html" %}
-
-{% block main_content %}
-    {% if section.extra.section_path -%}
-        {% set section = get_section(path=section.extra.section_path) %}
-    {% endif -%}
-
-    {{ post_macros::page_header(title=section.title) }}
-
-    <main>
-        {%- if paginator %}
-            {%- set show_pages = paginator.pages -%}
-        {% else %}
-            {%- set show_pages = section.pages -%}
-        {% endif -%}
-
-        {{ post_macros::cards_posts(pages=show_pages) }}
-    </main>
-
-    {% if paginator %}
-        <ul class="pagination">
-            {% if paginator.previous %}
-                <span class="page-item page-prev">
-                    <a href={{ paginator.previous }} class="page-link" aria-label="Previous"><span aria-hidden="true">← Prev</span></a>
-                </span>
+{% macro cards_posts(pages) %}
+    <div class="cards">
+    {%- for page in pages %}
+        {% if not page.extra.ignore %}
+        <div class="card">
+            {% if page.extra.local_image %}
+            <div class="card-image-container">
+                <a id="card-image-links" href={{ page.permalink }} title= "{{ page.title }}
+{{ page.description }}">
+                    <img class="card-image" alt={{ page.extra.local_image }} src="{{ get_url(path=page.extra.local_image) }}"/>
+                </a>
+            </div>
             {% endif %}
 
-            {% if paginator.next %}
-                <span class="page-item page-next">
-                    <a href={{ paginator.next }} class="page-link" aria-label="Next"><span aria-hidden="true">Next →</span></a>
-                </span>
-            {% endif %}
-        </ul>
-    {% endif %}
-{% endblock main_content %}
+            <div class="card-info">
+                <h1 class="card-title">
+                    {% if page.extra.link_to %}
+                    <a href={{ page.extra.link_to }} title= "Read about {{ page.title }}" >{{ page.title }}</a>
+                    {% else %}
+                    <a href={{ page.permalink }} title= "Read about {{ page.title }}">{{ page.title }}</a>
+                    {% endif %}
+                </h1>
+
+                <div class="card-tags">
+                {% if page.extra.tags %}
+                    {% set tags = page.extra.tags%}
+                    {% for tag in tags %}
+                        <strong class="card-tag" style="background-color: var(--card-tags-bg-1);">
+                            #{{ tag }}
+                        </strong>
+                    {% endfor %}
+                {% endif %}
+                </div>
+                <!-- <div class="card-description">
+                    {% if page.description %}
+                        {{ page.description }}
+                    {% endif %}
+                </div> -->
+            </div>
+        </div>
+        {% endif %}
+    {% endfor -%}
+    </div>
+{% endmacro cards_posts %}

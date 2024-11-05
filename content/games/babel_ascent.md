@@ -6,11 +6,12 @@ weight = 6
 
 [extra]
 local_image = "/games/babel_ascent.png"
+tags=["godot-engine", "team", "lead designer", "technical gameplay designer", "vr", "shader"]
 babel = true
 +++
 <div class = "gallery">
-<iframe width="400" height="225" style="padding-bottom: 1em;" src="https://www.youtube.com/embed/gEMYtLm-8uY?si=rjLIaHoLB0D_y3Nd" title="Babel Ascent Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="400" height="225"src="https://www.youtube.com/embed/StAaA7DYxMg?si=MtQHS2mt9SeBrxY8" title="Babel Ascent Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="400" height="225" class ="gallery-video" src="https://www.youtube.com/embed/gEMYtLm-8uY?si=rjLIaHoLB0D_y3Nd" title="Babel Ascent Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="400" height="225" class ="gallery-video" src="https://www.youtube.com/embed/StAaA7DYxMg?si=MtQHS2mt9SeBrxY8" title="Babel Ascent Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 After working on a few small projects in VR, I wanted to create an actual game using my acquired knowledge. So [UnconsciousMotifs](https://unconscious-motifs.itch.io), [BatFerro](https://itch.io/profile/andrea-ferretti) and I were full of energy to start working on this project.

@@ -85,14 +85,9 @@
     {% endif -%}
 {% endmacro tags %}
 
-{% macro page_header(title, image="") %}
+{% macro page_header(title) %}
     <div class="page-header">
         {{ title }}<span class="primary-color" style="font-size: 1.6em">.</span>
-
-        <!-- {% if image %}
-            <img class="page-image" alt={{ image }} src="{{ get_url(path=image) }}"/>
-        {% endif %} -->
-
     </div>
 {% endmacro content %}
 
@@ -111,60 +106,45 @@
 <main>
     <article>
         <div class="title">
-            {#<h1 class="title">{{ page.title }}</h1>#}
+            {# <h1 class="title">{{ page.title }}</h1> #}
 
-            {% if page.extra.banner_image %}
-                {{ post_macros::page_header(title = page.title, image = page.extra.banner_image) }}
-            {% else %}
-                {{ post_macros::page_header(title=page.title) }}
-            {% endif %}
+            {{ post_macros::page_header(title=page.title) }}
+
+            <div class="card-tags">
+                {% if page.extra.tags %}
+                {% set tags = page.extra.tags%}
+                {% for tag in tags %}
+                    <strong class="card-tag" style="background-color: var(--card-tags-bg-2);">
+                        #{{ tag }}
+                    </strong>
+                {% endfor %}
+                {% endif %}
+            </div>
 
 
-                <div class="meta">
-                    {% if page.date %}
-                        Posted on <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+            <div class="meta">    
+                {# View the page on GitHub #}
+                {% if page.extra.repo_view | default(value=false) %}
+                    {# Use the page's repo_url if defined, otherwise use the global edit_repo_url #}
+                    {% if page.extra.repo_url is defined %}
+                        {% set repo_url = page.extra.repo_url %}
+                    {% elif config.extra.repo_url is defined %}
+                        {% set repo_url = config.extra.repo_url %}
+                    {% else %}
+                        {% set repo_url = false %}
                     {% endif %}
 
-                    {% if page.updated %}
-                        :: Updated on <time>{{ page.updated | date(format="%Y-%m-%d") }}</time>
+                    {% if repo_url %}
+                        {% set final_url = repo_url ~ page.relative_path %}
+                        :: <a href="{{ final_url }}" target="_blank" rel="noopener noreferrer"> Source Code</a>
                     {% endif %}
+                {% endif %}
 
-                    {% if page.extra.read_time %}
-                        :: <time>{{ page.reading_time }}</time> Min Read
-                    {% endif %}
+                {% if page.draft %}
+                    <span class="draft-label">DRAFT</span>
+                {% endif %}
 
-                    {# Inline display of tags directly after the date #}
-                    {% if page.taxonomies and page.taxonomies.tags %}
-                            <span class="tags-label"> :: Tags:</span>
-                            <span class="tags">
-                                {%- for tag in page.taxonomies.tags %}
-                                    <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="post-tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-                                {% endfor %}
-                            </span>
-                    {% endif %}
-
-                    {# View the page on GitHub #}
-                    {% if page.extra.repo_view | default(value=false) %}
-                        {# Use the page's repo_url if defined, otherwise use the global edit_repo_url #}
-                        {% if page.extra.repo_url is defined %}
-                            {% set repo_url = page.extra.repo_url %}
-                        {% elif config.extra.repo_url is defined %}
-                            {% set repo_url = config.extra.repo_url %}
-                        {% else %}
-                            {% set repo_url = false %}
-                        {% endif %}
-
-                        {% if repo_url %}
-                            {% set final_url = repo_url ~ page.relative_path %}
-                            :: <a href="{{ final_url }}" target="_blank" rel="noopener noreferrer"> Source Code</a>
-                        {% endif %}
-                    {% endif %}
-
-                    {% if page.draft %}
-                        <span class="draft-label">DRAFT</span>
-                    {% endif %}
-
-                </div>
+            </div>
         </div>
 
         {% if page.extra.tldr %}

@@ -1,0 +1,66 @@
+html {
+    font-size: calc(16px + (18 - 16) * ((100vw - 640px) / (960 - 640)));
+}
+
+// @keyframes fadeInUp {
+//     0% {
+//         opacity: 0;               /* Inizio completamente trasparente */
+//         transform: translateY(20px); /* Posizione iniziale spostata verso il basso */
+//     }
+//     100% {
+//         opacity: 1;               /* Completamente visibile */
+//         transform: translateY(0); /* Posizione finale (nessuno spostamento) */
+//     }
+// }
+
+// div {
+//     opacity: 1; /* Nascondi inizialmente l'elemento */
+// }
+
+// div.animate {
+//     animation: fadeInUp 1s ease-out forwards; /* Applica l'animazione al trigger */
+// }
+
+@media (max-width: 1100px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0 0.6em;
+    }
+
+    header .main {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 0.6em;
+    }
+
+    #text {
+        padding: 0 3em 1em 3em;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media all and (min-width: 640px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
+
+@media all and (max-width: 640px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill, 1fr);
+    }
+}
+
+@media all and (max-width:720px) {
+    .cards {
+        gap: 18px;
+    }
+}

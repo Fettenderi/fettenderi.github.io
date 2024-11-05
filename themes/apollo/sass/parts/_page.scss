@@ -5,11 +5,16 @@
 }
 
 .gallery-gif,
-.gallery-image {
+.gallery-image,
+.gallery-video {
     flex-grow: 1;
     border-color: transparent;
     border-radius: 5px;
     margin: 0.2rem;
+}
+
+.gallery-video {
+    aspect-ratio: 16 / 9;
 }
 
 .text-button {

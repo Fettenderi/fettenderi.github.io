@@ -1,11 +1,11 @@
 theme = "apollo"
-taxonomies = [{ name = "tags" }]
 
 # See this for more options: https://github.com/not-matthias/apollo/blob/main/config.toml#L14
 
 # base_url = "https://fettenderimakes.games"
 base_url = "https://fettenderi.github.io"
 title = "Marco Manganaro"
+description = "Technical Gameplay Designer"
 
 compile_sass = true
 minify_html = true
@@ -18,14 +18,13 @@ highlight_code = true
 toc = true
 theme = "toggle"
 favicon = "/icon/favicon.png"
-socials = [
-  { name = "linktree", url = "https://linktr.ee/fettenderi", icon = "linktree" },
-  { name = "itch.io", url = "https://fettenderi.itch.io", icon = "itchio" },
-  { name = "github", url = "https://github.com/Fettenderi", icon = "github" },
-  { name = "linkedin", url = "https://www.linkedin.com/in/marco-manganaro/", icon = "linkedin" },
-]
+socials = []
 menu = [
-    { name = "/games", url = "/games", weight = 1 },
-    { name = "/about", url = "/about", weight = 2 },
+    { name = "/cv", url = "/cv", weight = 2 },
+    { name = "/mail", url = "mailto:marco.manganaro03@gmail.com", weight = 2 },
+    { name = "/linkedin", url = "https://www.linkedin.com/in/marco-manganaro/", weight = 2 },
+    { name = "/github", url = "https://github.com/Fettenderi", weight = 2 },
+    { name = "/itch.io", url = "https://fettenderi.itch.io", weight = 2 },
+    { name = "/linktree", url = "https://linktr.ee/fettenderi", weight = 1 },
 ]
 

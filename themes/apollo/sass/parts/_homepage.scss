@@ -1,21 +1,6 @@
+
 #text {
-    width: 40%;
-    padding-right: 100px;
-}
-
-#home {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-@media (max-width: 768px) {
-    #text {
-        width: auto;
-        padding-right: 0px;
-    }
-    
-    #home {
-        display: contents;
-        flex-wrap: nowrap;
-    }
+    text-align: center;
+    font-size: 0.85em;
+    padding: 0 7em 1em 6em;
 }

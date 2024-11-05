@@ -5,7 +5,9 @@ date = "2023-07-20"
 weight = 3
 
 [extra]
+tags=["godot-engine", "team", "3d", "technical designer"]
 local_image = "/games/projectmecha_alien.png"
+ignore = true
 +++
 
 After a two-year break from game development, I joined MechJam IV, and for the first time, I wasn’t working alone. I had the opportunity to collaborate with an amazing composer experienced with Wwise and FMOD.

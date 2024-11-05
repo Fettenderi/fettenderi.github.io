@@ -153,44 +153,15 @@
 
 
     {% if page.extra.babel %}
-
-    <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/babel.css') }}" />
-    <script src={{ get_url(path="js/themetoggle.js") }}></script>
-    <script>setTheme("babel");</script>
-
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/babel.css') }}" />
+        <script src={{ get_url(path="js/themetoggle.js") }}></script>
+        <script>setTheme("babel");</script>
     {% else %}
-
-    {% set theme = config.extra.theme | default(value="toggle") %}
-    {% if theme == "dark" %}
         <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" />
-    {% elif theme == "light" %}
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="theme/light.css") }} />
-    {% elif theme == "auto" %}
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="theme/light.css") }} />
-        <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" media="(prefers-color-scheme: dark)" />
-    {% elif theme == "toggle" %}
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="theme/light.css") }} />
-        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" />
-    {% endif %}
 
-    <!-- Set the correct theme in the script -->
-    <script src={{ get_url(path="js/themetoggle.js") }}></script>
-    {% if theme == "dark" %}
+        <!-- Set the correct theme in the script -->
+        <script src={{ get_url(path="js/themetoggle.js") }}></script>
         <script>setTheme("dark");</script>
-    {% elif theme == "light" %}
-        <script>setTheme("light");</script>
-    {% elif theme == "auto" %}
-        <script>
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setTheme("dark");
-            } else {
-                setTheme("light");
-            }
-        </script>
-    {% else %}
-        <script>setTheme(getSavedTheme());</script>
-    {% endif %}
-
     {% endif %}
 
 

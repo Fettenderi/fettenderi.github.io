@@ -1,5 +1,25 @@
 {% extends "base.html" %}
+{% import "cards.html" as cards %}
 
 {% block main_content %}
-    {{ post_macros::home_page(section=section) }}
+    <main>
+        <article>
+            <section id = "home" class="body">
+                <div id = "text">
+                     {{ section.content | safe }}
+                </div>
+
+                <div id = "games">
+                    {% if section.extra.section_path -%}
+                        {% set section = get_section(path=section.extra.section_path) %}
+                        {%- set show_pages = section.pages -%}
+
+                        {{ cards::cards_posts(pages=show_pages) }}
+
+                    {% endif -%}
+                </div>
+            </section>
+        </article>
+    </main>
+
 {% endblock main_content %}

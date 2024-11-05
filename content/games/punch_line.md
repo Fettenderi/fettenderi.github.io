@@ -5,6 +5,7 @@ date = "2024-01-28"
 weight = 4
 
 [extra]
+tags=["unity-engine", "team","junior programmer", "typing"]
 local_image = "/games/punch_line.png"
 +++
 

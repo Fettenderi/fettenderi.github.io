@@ -14,16 +14,18 @@ $accent-color: #e3a049;
 :root.dark {
   --text-0: #{$text};
   --text-1: #{$text};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$accent-color};
+
+  --card-tags-bg-1: #{$footer-bg};
+  --card-tags-bg-2: #{$card-bg};
+  --card-tags: #{$text};
 
   --bg-0: #{$page-bg};
   --bg-1: #{$card-bg};
   --bg-2: #{$border-bg};
   --bg-3: #{$footer-bg};
-
   --border-color: var(--bg-2);
-
-  --primary-color: #{$primary-color};
-  --secondary-color: #{$accent-color};
   --hover-color: #{$hover};
 
   .social-icon {

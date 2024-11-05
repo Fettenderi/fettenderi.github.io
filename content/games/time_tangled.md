@@ -5,6 +5,7 @@ date = "2021-05-22"
 weight = 2
 
 [extra]
+tags=["godot-engine", "solo", "bullet-hell"]
 local_image = "/games/time_tangled.png"
 +++
 
