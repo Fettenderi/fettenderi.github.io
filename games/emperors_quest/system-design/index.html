@@ -1,0 +1,122 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1.0" name=viewport><title>
+         Emperor's Quest: System Design
+        
+    </title><link href=/icon/favicon.png rel=icon type=image/png><link href=https://fettenderi.github.io/fonts.css rel=stylesheet><script src=https://fettenderi.github.io/js/toc.js></script><link title="Marco Manganaro" href=https://fettenderi.github.io/atom.xml rel=alternate type=application/atom+xml><link href=https://fettenderi.github.io/theme/dark.css rel=stylesheet><script src=https://fettenderi.github.io/js/themetoggle.js></script><script>setTheme("dark")</script><link href=https://fettenderi.github.io/main.css media=screen rel=stylesheet><body><div class=content><header><div class=main><a href=https://fettenderi.github.io> <strong id=title> Marco Manganaro </strong> <div id=description>Technical Gameplay Designer</div> </a></div><nav><a href=mailto:marco.manganaro03@gmail.com id=menu-item target=_blank>/mail</a><a href=https://www.linkedin.com/in/marco-manganaro/ id=menu-item target=_blank>/linkedin</a><a href=https://github.com/Fettenderi id=menu-item target=_blank>/github</a><a href=https://fettenderi.itch.io id=menu-item target=_blank>/itch.io</a><a href=https://linktr.ee/fettenderi id=menu-item target=_blank>/linktree</a></nav></header><main><article><div class=title><div class=page-header>Emperor's Quest: System Design<span class=primary-color style=font-size:1.6em>.</span></div><div class=card-tags></div><div class=meta></div></div><div class=toc-container><h1 class=toc-title>Table of Contents</h1><ul class=toc-list><li><a href=https://fettenderi.github.io/games/emperors_quest/system-design/#crowd-system>Crowd System:</a> <ul><li><a href=https://fettenderi.github.io/games/emperors_quest/system-design/#first-design>First Design:</a><li><a href=https://fettenderi.github.io/games/emperors_quest/system-design/#final-design>Final Design:</a><li><a href=https://fettenderi.github.io/games/emperors_quest/system-design/#case-study-leaderhivebehaviour>Case Study: LeaderHiveBehaviour</a></ul></ul></div><section class=body><h1 id=crowd-system>Crowd System:</h1><h2 id=first-design>First Design:</h2><p>The hordes system went through many different iterations.<p>The first concept was inspired by Dream Luigi of Mario & Luigi: Dream Team Bros. and by a Clank minigame of the Ratchet and Clank saga.<div class=gallery><img class=gallery-gif src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXk4Y2Z1c3IyeXl3ZnJrdXVyc3g4M2RmN2xjNHJqaGx4ZjJpajQ0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tgwsXavtMuzzd2OvBn/giphy.gif><img class=gallery-gif src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanB2b2F6cThqZGtuc2Q2bzl2MnU0OWt4dzdpNzA2Zm41NnNvajE0ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PMon7BrVYAJdOLBs2Y/giphy-downsized-large.gif></div><p>It was fairly simple, for each 10 new members a new form would be unlocked, as depicted in this diagram:<div class=gallery><img class=solo-image src=https://fettenderi.github.io/processed_images/hordes_diagram.bcc90e0842b568bb.png></div><p>Maybe with more development time I would have made the Giant Chicken Form the way I wanted but in the end I'm happy with what I've achieved.<h2 id=final-design>Final Design:</h2><p>The final version of the Controller is based solely on the Leader-Follower Mode. It works through a Singleton, the HiveMind that is being controlled by the HiveController. The HiveMind then relays all its inputs to the available leaders and they do the same with their followers.<div class=gallery><img class=solo-image src=https://fettenderi.github.io/processed_images/hive_diagram.2eebf8b8768f942d.png></div><p>A HiveMember can change Behaviour at any time with any other Behaviour using common methods.<pre class=language-gd data-lang=gd data-linenos style=background:#2b303b;color:#c0c5ce><code class=language-gd data-lang=gd><table><tbody><tr><td>1<td><span>class_name HiveBehaviour
+</span><tr><td>2<td><span style=color:#b48ead>extends</span><span style=color:#a3be8c> Node2D
+</span><tr><td>3<td><span>
+</span><tr><td>4<td><span style=color:#b48ead>var </span><span style=color:#bf616a>is_active</span><span> := </span><span style=color:#d08770>false
+</span><tr><td>5<td><span style=color:#b48ead>var </span><span style=color:#bf616a>member</span><span> : HiveMember
+</span><tr><td>6<td><span>
+</span><tr><td>7<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>start</span><span>(</span><span style=color:#bf616a>_info</span><span> := {}): </span><span style=color:#b48ead>pass
+</span><tr><td>8<td><span>
+</span><tr><td>9<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>update_orders</span><span>(</span><span style=color:#bf616a>_direction</span><span> : </span><span style=color:#bf616a>int</span><span>, </span><span style=color:#bf616a>_wants_jump</span><span> : </span><span style=color:#bf616a>bool</span><span>, </span><span style=color:#bf616a>_wants_tower</span><span> : </span><span style=color:#bf616a>bool</span><span>) -> </span><span style=color:#b48ead>void</span><span>: </span><span style=color:#b48ead>pass
+</span><tr><td>10<td><span>
+</span><tr><td>11<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>end</span><span>(): </span><span style=color:#bf616a>queue_free</span><span>()
+</span><tr><td>12<td><span>
+</span><tr><td>13<td><span>
+</span><tr><td>14<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>become_follower</span><span>(</span><span style=color:#bf616a>_info</span><span> := {}): </span><span style=color:#b48ead>pass
+</span><tr><td>15<td><span>
+</span><tr><td>16<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>become_leader</span><span>(</span><span style=color:#bf616a>_info</span><span> := {}): </span><span style=color:#b48ead>pass
+</span><tr><td>17<td><span>
+</span><tr><td>18<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>become_inactive</span><span>(</span><span style=color:#bf616a>_info</span><span> := {}): </span><span style=color:#b48ead>pass
+</span><tr><td>19<td><span>
+</span><tr><td>20<td><span>
+</span><tr><td>21<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>free_member</span><span>(): </span><span style=color:#b48ead>pass
+</span></table></code></pre><p>Probably this isn't the most effective way to do this but it works and solves many problems I had with other iterations of such system.<p>To describe the modes in which a Member can change Behaviour, I synthesized all possible cases in 4 events described by this diagram. This helped me tackle the code and implementation of such system.<div class=gallery><img class=solo-image src=https://fettenderi.github.io/processed_images/members_transformation_diagram.0ffde5a76483e25b.png></div><div class=gallery><img class=gallery-gif src=https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDhjYjdhdWlvNG1vOHA3Zmhib2d4YWF5ODBjdnFzamhyMm90bTVkMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0sJYf4X0cfKwkOieIG/giphy.gif></div><h2 id=case-study-leaderhivebehaviour>Case Study: LeaderHiveBehaviour</h2><div class=note-container><div class=note-header><div class=note-icon><p>Very long code block!</div></div><div class=note-content><p>The following section is a very long chunk of code, if you couldn't handle the first one don't go forwards. If you are into this, go for it, it's far from perfect but it may be interesting to look at idunno.</div></div><pre class=language-gd data-lang=gd data-linenos style=background:#2b303b;color:#c0c5ce><code class=language-gd data-lang=gd><table><tbody><tr><td>1<td><span>class_name LeaderHiveBehaviour
+</span><tr><td>2<td><span style=color:#b48ead>extends</span><span style=color:#a3be8c> HiveBehaviour
+</span><tr><td>3<td><span>
+</span><tr><td>4<td><span>@</span><span style=color:#b48ead>export var </span><span style=color:#bf616a>leader_boost_factor</span><span> := </span><span style=color:#d08770>1.0
+</span><tr><td>5<td><span>
+</span><tr><td>6<td><span style=color:#b48ead>var </span><span style=color:#bf616a>followers</span><span> : </span><span style=color:#b48ead>Array</span><span>[HiveMember] = []
+</span><tr><td>7<td><span>
+</span><tr><td>8<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>start</span><span>(</span><span style=color:#bf616a>info</span><span> := {}):
+</span><tr><td>9<td><span>    </span><span style=color:#65737e># Reset member's movement variables
+</span><tr><td>10<td><span>
+</span><tr><td>11<td><span>    member.leader_boost = leader_boost_factor
+</span><tr><td>12<td><span>    </span><span style=color:#b48ead>if</span><span> info.</span><span style=color:#bf616a>has</span><span>("</span><span style=color:#a3be8c>followers</span><span>"):
+</span><tr><td>13<td><span>        followers = info["</span><span style=color:#a3be8c>followers</span><span>"]
+</span><tr><td>14<td><span>        </span><span style=color:#b48ead>for</span><span> follower in followers:
+</span><tr><td>15<td><span>            follower.behaviour.</span><span style=color:#bf616a>become_follower</span><span>({"</span><span style=color:#a3be8c>leader_member</span><span>": member})
+</span><tr><td>16<td><span>
+</span><tr><td>17<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>end</span><span>():
+</span><tr><td>18<td><span>    member.leader_boost = </span><span style=color:#d08770>1
+</span><tr><td>19<td><span>    member.z_index -= </span><span style=color:#d08770>1
+</span><tr><td>20<td><span>    </span><span style=color:#bf616a>queue_free</span><span>()
+</span><tr><td>21<td><span>
+</span><tr><td>22<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>update_orders</span><span>(</span><span style=color:#bf616a>new_direction</span><span> : </span><span style=color:#bf616a>int</span><span>, </span><span style=color:#bf616a>new_wants_jump</span><span> : </span><span style=color:#bf616a>bool</span><span>, </span><span style=color:#bf616a>new_wants_tower</span><span> : </span><span style=color:#bf616a>bool</span><span>) -> </span><span style=color:#b48ead>void</span><span>:
+</span><tr><td>23<td><span>    </span><span style=color:#b48ead>if </span><span>not is_active: </span><span style=color:#b48ead>return
+</span><tr><td>24<td><span>
+</span><tr><td>25<td><span>    </span><span style=color:#65737e># If hijacked order stop movement to followers
+</span><tr><td>26<td><span>
+</span><tr><td>27<td><span>    </span><span style=color:#65737e># If is able to tower and has requested:
+</span><tr><td>28<td><span>    </span><span style=color:#65737e># Try to build tower if not building one
+</span><tr><td>29<td><span>    </span><span style=color:#65737e># Stop building tower if already building
+</span><tr><td>30<td><span>
+</span><tr><td>31<td><span>    member.wants_jump = new_wants_jump and can_jump
+</span><tr><td>32<td><span>    member.direction = new_direction * (</span><span style=color:#d08770>0.5 </span><span style=color:#b48ead>if</span><span> building_tower </span><span style=color:#b48ead>else </span><span style=color:#d08770>1.0</span><span>)
+</span><tr><td>33<td><span>
+</span><tr><td>34<td><span>    </span><span style=color:#b48ead>for</span><span> follower in followers:
+</span><tr><td>35<td><span>        follower.behaviour.</span><span style=color:#bf616a>update_orders</span><span>(new_direction, member.wants_jump, building_tower)
+</span><tr><td>36<td><span>
+</span><tr><td>37<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>_build_tower_started</span><span>():
+</span><tr><td>38<td><span>    </span><span style=color:#65737e># Calling each follower by index to maintain order.
+</span><tr><td>39<td><span>
+</span><tr><td>40<td><span>    </span><span style=color:#65737e># This makes the followers all line up and start to do little jumps to get
+</span><tr><td>41<td><span>    </span><span style=color:#65737e># on top of each other.
+</span><tr><td>42<td><span>    </span><span style=color:#b48ead>for</span><span> i in </span><span style=color:#bf616a>range</span><span>(</span><span style=color:#bf616a>len</span><span>(followers)):
+</span><tr><td>43<td><span>        </span><span style=color:#b48ead>if</span><span> followers[i].behaviour is FollowerHiveBehaviour:
+</span><tr><td>44<td><span>            followers[i].behaviour.</span><span style=color:#bf616a>_tower_jump</span><span>()
+</span><tr><td>45<td><span>            await followers[i].behaviour.finished_jumping
+</span><tr><td>46<td><span>            </span><span style=color:#b48ead>if </span><span>not building_tower: </span><span style=color:#b48ead>return
+</span><tr><td>47<td><span>
+</span><tr><td><mark style=background:#65737e30>48</mark><td><mark style=background:#65737e30><span style=color:#b48ead>func </span><span style=color:#8fa1b3>become_follower</span><span>(</span><span style=color:#bf616a>info</span><span> := {}):
+</span></mark><tr><td><mark style=background:#65737e30>49</mark><td><mark style=background:#65737e30><span>    </span><span style=color:#b48ead>if</span><span> info.</span><span style=color:#bf616a>has</span><span>("</span><span style=color:#a3be8c>leader_member</span><span>"):
+</span></mark><tr><td><mark style=background:#65737e30>50</mark><td><mark style=background:#65737e30><span>        </span><span style=color:#bf616a>_release_followers</span><span>(info["</span><span style=color:#a3be8c>leader_member</span><span>"])
+</span></mark><tr><td><mark style=background:#65737e30>51</mark><td><mark style=background:#65737e30><span>        member.</span><span style=color:#bf616a>change_behaviour</span><span>(HiveMind.available_hive_behaviours[HiveMind.HiveBehaviours.FOLLOWER], {"</span><span style=color:#a3be8c>leader_member</span><span>": info["</span><span style=color:#a3be8c>leader_member</span><span>"]})
+</span></mark><tr><td><mark style=background:#65737e30>52</mark><td><mark style=background:#65737e30><span>        info["</span><span style=color:#a3be8c>leader_member</span><span>"].behaviour.followers.</span><span style=color:#bf616a>append</span><span>(member)
+</span></mark><tr><td>53<td><span>
+</span><tr><td>54<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>become_leader</span><span>(</span><span style=color:#bf616a>_info</span><span> := {}):
+</span><tr><td>55<td><span>    </span><span style=color:#b48ead>pass
+</span><tr><td>56<td><span>
+</span><tr><td><mark style=background:#65737e30>57</mark><td><mark style=background:#65737e30><span style=color:#b48ead>func </span><span style=color:#8fa1b3>become_inactive</span><span>(</span><span style=color:#bf616a>_info</span><span> := {}):
+</span></mark><tr><td><mark style=background:#65737e30>58</mark><td><mark style=background:#65737e30><span>    </span><span style=color:#b48ead>for</span><span> follower : HiveMember in followers:
+</span></mark><tr><td><mark style=background:#65737e30>59</mark><td><mark style=background:#65737e30><span>        follower.</span><span style=color:#bf616a>change_behaviour</span><span>(HiveMind.available_hive_behaviours[HiveMind.HiveBehaviours.INACTIVE])
+</span></mark><tr><td><mark style=background:#65737e30>60</mark><td><mark style=background:#65737e30><span>    HiveMind.members_count -= </span><span style=color:#d08770>1
+</span></mark><tr><td><mark style=background:#65737e30>61</mark><td><mark style=background:#65737e30><span>    member.</span><span style=color:#bf616a>change_behaviour</span><span>(HiveMind.available_hive_behaviours[HiveMind.HiveBehaviours.INACTIVE])
+</span></mark><tr><td>62<td><span>
+</span><tr><td>63<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>free_member</span><span>():
+</span><tr><td>64<td><span>    </span><span style=color:#bf616a>_release_followers</span><span>()
+</span><tr><td>65<td><span>    HiveMind.members_count -= </span><span style=color:#d08770>1
+</span><tr><td>66<td><span>    is_active = </span><span style=color:#d08770>false
+</span><tr><td>67<td><span>    member.</span><span style=color:#bf616a>queue_free</span><span>()
+</span><tr><td>68<td><span>
+</span><tr><td>69<td><span>
+</span><tr><td>70<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>_release_followers</span><span>(</span><span style=color:#bf616a>to_member</span><span> : </span><span style=color:#bf616a>HiveMember</span><span> = </span><span style=color:#bf616a>null</span><span>):
+</span><tr><td>71<td><span>    HiveMind.leaders.</span><span style=color:#bf616a>erase</span><span>(member)
+</span><tr><td>72<td><span>
+</span><tr><td>73<td><span>    </span><span style=color:#65737e># If to_member != null assign the followers to him
+</span><tr><td>74<td><span>    </span><span style=color:#65737e># otherwise pick the last follower and promote him to leader and assign the other followers to him
+</span><tr><td>75<td><span>
+</span><tr><td>76<td><span style=color:#65737e>## Activated when another Leader or an Inactive member gets near
+</span><tr><td>77<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>_on_control_box_area_entered</span><span>(</span><span style=color:#bf616a>area</span><span> : </span><span style=color:#bf616a>Area2D</span><span>) -> </span><span style=color:#b48ead>void</span><span>:
+</span><tr><td>78<td><span>    </span><span style=color:#b48ead>if</span><span> is_active and not is_hijacked:
+</span><tr><td>79<td><span>        </span><span style=color:#b48ead>var </span><span style=color:#bf616a>hive_behaviour</span><span> : HiveBehaviour = area.</span><span style=color:#bf616a>get_parent</span><span>()
+</span><tr><td>80<td><span>
+</span><tr><td>81<td><span>        </span><span style=color:#b48ead>if</span><span> hive_behaviour is HiveBehaviour:
+</span><tr><td>82<td><span>            hive_behaviour.</span><span style=color:#bf616a>become_follower</span><span>({"</span><span style=color:#a3be8c>leader_member</span><span>": member})
+</span><tr><td>83<td><span>            </span><span style=color:#bf616a>_handle_new_follower</span><span>()
+</span><tr><td>84<td><span>
+</span><tr><td>85<td><span style=color:#65737e>## Activated when the player gets too far
+</span><tr><td>86<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>_on_lost_check_box_body_exited</span><span>(</span><span style=color:#bf616a>body</span><span>) -> </span><span style=color:#b48ead>void</span><span>:
+</span><tr><td>87<td><span>    </span><span style=color:#b48ead>if</span><span> is_active and body is Player:
+</span><tr><td>88<td><span>        </span><span style=color:#bf616a>become_inactive</span><span>()
+</span><tr><td>89<td><span>
+</span><tr><td>90<td><span style=color:#b48ead>func </span><span style=color:#8fa1b3>_handle_new_follower</span><span>() -> </span><span style=color:#b48ead>void</span><span>:
+</span><tr><td>91<td><span>    %CanFollowersJumpTimer.</span><span style=color:#bf616a>start</span><span>()
+</span><tr><td>92<td><span>    can_jump = </span><span style=color:#d08770>false
+</span><tr><td>93<td><span>    </span><span style=color:#b48ead>if </span><span style=color:#bf616a>len</span><span>(followers) >= </span><span style=color:#d08770>10</span><span>:
+</span><tr><td>94<td><span>        can_tower = </span><span style=color:#d08770>true
+</span><tr><td>95<td><span>    </span><span style=color:#b48ead>else</span><span>:
+</span><tr><td>96<td><span>        can_tower = </span><span style=color:#d08770>false
+</span><tr><td>97<td><span>        building_tower = </span><span style=color:#d08770>false
+</span></table></code></pre></section></article></main></div><footer>made by <a class=white href>fettenderi</a> | 2024 - 2024 © <br> built using <a href=https://www.getzola.org>zola</a>, based on <a href=https://github.com/not-matthias/apollo>apollo</a></footer>
