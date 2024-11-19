@@ -22,7 +22,7 @@ On this bridge I wanted to convey two things: the true identity of the villain a
 For those who don't know, these detect vibrations nearby and relay those to sculk shriekers that summon a powerful enemy after some shrieks.
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://media.giphy.com/media/P35Wpoxr0mJGW45aal/giphy.gif">
+<img class = "solo-image" src="https://media.giphy.com/media/P35Wpoxr0mJGW45aal/giphy.gif">
 </div>
 
 So for those who don't know the mechanic this can create curiosity of what could come next and for those who know this makes them scared and more careful.
@@ -31,19 +31,19 @@ So for those who don't know the mechanic this can create curiosity of what could
 This section of the second level is a calm and at the same time tense exploration place. Even though the only available path is forwards I used ladders and stairs to give the space more verticality.
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGppczB5bjVuMDlrcXI0eW94MXYxNm9mZXdna2I1a21oMXJmNHI0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CdC6U3lWBht1Ieo3TC/giphy-downsized-large.gif">
+<img class = "solo-image" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGppczB5bjVuMDlrcXI0eW94MXYxNm9mZXdna2I1a21oMXJmNHI0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CdC6U3lWBht1Ieo3TC/giphy-downsized-large.gif">
 </div>
 
 If you move too fast you will trigger the sculk shriekers that will spawn the warden. 
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2JtZms0N2p3aXJ3MWUyc2I4N2lpd2M2OWR2N2ZhdXZscTdqa2sxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Nj8NDLyAyVASyaSDcC/giphy.gif">
+<img class = "solo-image" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2JtZms0N2p3aXJ3MWUyc2I4N2lpd2M2OWR2N2ZhdXZscTdqa2sxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Nj8NDLyAyVASyaSDcC/giphy.gif">
 </div>
 
 Immediately after that calm sequence there is a frenetic sequence in which the warden will spawn no matter what the player does and it will blast the player with continous attacks until they reach a safe spot.
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://media.giphy.com/media/XPsph0sIcWBCRPQqPl/giphy.gif">
+<img class = "solo-image" src="https://media.giphy.com/media/XPsph0sIcWBCRPQqPl/giphy.gif">
 </div>
 
 # Introduction of vertical magnetic surfaces
@@ -67,7 +67,7 @@ This becomes even clearer at the end of the level where I made a big crystal hab
 The goal of this section is to prepare the player for a new golem mechanic, the tower and fear mode. To make this mechanic even more powerful I remove all golems from the player, to make them feel powerless.
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://media.giphy.com/media/VDwTgGyAIkyIDrnI33/giphy.gif">
+<img class = "solo-image" src="https://media.giphy.com/media/VDwTgGyAIkyIDrnI33/giphy.gif">
 </div>
 
 When the player gets enough golems it will be able to tell them to start to create a tower that can be climbed. With even more golems the enemies will become scared of you and will start to flee.

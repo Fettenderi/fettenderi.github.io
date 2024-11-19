@@ -18,14 +18,14 @@ To make all possible kinds of enemies that I can think of inspired by Minecraft,
  has many parameters that describe its behaviour. In Engine these parameters are visible as a sequence of concentric circles around the enemy, these describe: max throwing distance, max idle distance and min repulsion distance. The ranged attack module is used on the skeleton, but also on the warden and the arrow dispenser and tnt dispensers.
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3p0cGo1NnhxZ2s0cjVoM3hmeW51NHZpcWJscTN6MnpjZHhqZTV4biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3UR1uy8fUd36Va6m84/giphy.gif">
+<img class = "solo-image" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3p0cGo1NnhxZ2s0cjVoM3hmeW51NHZpcWJscTN6MnpjZHhqZTV4biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3UR1uy8fUd36Va6m84/giphy.gif">
 </div>
 
 ## Explosive class
  works thanks to the explosive module, when the target is within the min explosion distance the enemy will stop and activate the explosive module. This will activate a state machine that counts down the time before explosion, if the player moves away the countdown increases again until it reaches the maximum explosion time.
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3p6ZnIyZXpnbHM1eDZnOXVvb2NsdDJjbXdxbHEyNHd0ZDZvaTZsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rORqjqD0pD3nGVSS3X/giphy.gif">
+<img class = "solo-image" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3p6ZnIyZXpnbHM1eDZnOXVvb2NsdDJjbXdxbHEyNHd0ZDZvaTZsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rORqjqD0pD3nGVSS3X/giphy.gif">
 </div>
 
 To preview and design the different enemies I created a "mannequin" enemy, only capable, in Engine, to be dressed and have collisions placed according to the sprites.
@@ -87,8 +87,8 @@ Projectiles use a similar modular system as the enemies. I have a custom Resourc
 # Case study: The Warden
 
 <div class = "gallery">
-{{ resize_image(path="static/images/emperors_quest/warden_resources.png", width=550, height=550, op="fit") }}
-{{ resize_image(path="static/images/emperors_quest/warden_enemy_n_projectile.png", width=550, height=550, op="fit") }}
+{{ solo_image(path="static/images/emperors_quest/warden_resources.png", width=1000, height=1000, op="fit") }}
+{{ solo_image(path="static/images/emperors_quest/warden_enemy_n_projectile.png", width=1000, height=1000, op="fit") }}
 </div>
 
 
@@ -100,7 +100,9 @@ To display and design complex features with many parameters I had to create in E
 
 In the simplest case I only had to display explosiveness of TNT, represented as a circle to visualize the AoE of the explosion.
 
-{{ resize_image(path="static/images/emperors_quest/tnt_tooltip.png", width=250, height=250, op="fit") }}
+<div class = "gallery">
+{{ solo_image(path="static/images/emperors_quest/tnt_tooltip.png", width=1000, height=1000, op="fit") }}
+</div>
 
 ## Platform Manager:
 
@@ -110,7 +112,9 @@ In other cases I had to build custom tooltip, such as this for the Platform Mana
 - Length of the path represented by the start and end placeholder platforms
 - Amount of platforms visualized as small equidistant dots through the direction arrow
 
-{{ resize_image(path="static/images/emperors_quest/platforms_tooltip.png", width=550, height=550, op="fit") }}
+<div class = "gallery">
+{{ solo_image(path="static/images/emperors_quest/platforms_tooltip.png", width=1000, height=1000, op="fit") }}
+</div>
 
 ``` rust
 Direction: 0°                                   Direction: 90°     
@@ -164,9 +168,10 @@ Magnetic Surfaces aren't actually surfaces but instead areas that are positioned
 - Flow power, shown as the speed of the particles
 - Particles Density, this is purely aesthetical
 
-{{ resize_image(path="static/images/emperors_quest/surfaces_tooltip1.png", width=550, height=350, op="fit") }}
-
-{{ resize_image(path="static/images/emperors_quest/surfaces_tooltip2.png", width=550, height=350, op="fit") }}
+<div class = "gallery">
+{{ gallery_image(path="static/images/emperors_quest/surfaces_tooltip1.png", width=1000, height=1000, op="fit") }}
+{{ gallery_image(path="static/images/emperors_quest/surfaces_tooltip2.png", width=1000, height=1000, op="fit") }}
+</div>
 
 ``` rust
 Direction: 27°                                   Direction: 209°     
@@ -181,9 +186,10 @@ To control camera movements and in general zoom and other properties I have a pa
 - Starting zoom, the zoom factor at the left of the area, shown through the yellow box
 - Ending zoom, the zoom factor at the right of the area, shown through the green box
 
-{{ resize_image(path="static/images/emperors_quest/camera_tooltip1.png", width=450, height=350, op="fit") }}
-
-{{ resize_image(path="static/images/emperors_quest/camera_tooltip2.png", width=450, height=350, op="fit") }}
+<div class = "gallery">
+{{ gallery_image(path="static/images/emperors_quest/camera_tooltip1.png", width=1000, height=1000, op="fit") }}
+{{ gallery_image(path="static/images/emperors_quest/camera_tooltip2.png", width=1000, height=1000, op="fit") }}
+</div>
 
 ``` rust
 Zoom Start: 0.7                                   Zoom Start: 4.5     
@@ -191,5 +197,5 @@ Zoom End: 2.3                                     Zoom End: 0.2
 ```
 
 <div class = "gallery">
-<img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzV5OWIxNjBqOTI3YnBlejMxcGViZTU0dm5vaGhvc3lqcXhnMTA3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tOmGOKa0YUmpyERyAi/giphy-downsized-large.gif">
+<img class = "solo-image" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzV5OWIxNjBqOTI3YnBlejMxcGViZTU0dm5vaGhvc3lqcXhnMTA3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tOmGOKa0YUmpyERyAi/giphy-downsized-large.gif">
 </div>

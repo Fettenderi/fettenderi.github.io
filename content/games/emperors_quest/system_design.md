@@ -17,7 +17,9 @@ The first concept was inspired by Dream Luigi of Mario & Luigi: Dream Team Bros.
 
 It was fairly simple, for each 10 new members a new form would be unlocked, as depicted in this diagram:
 
-{{ resize_image(path="static/images/emperors_quest/hordes_diagram.png", width=1000, height=1000, op="fit") }}
+<div class = "gallery">
+{{ solo_image(path="static/images/emperors_quest/hordes_diagram.png", width=1000, height=1000, op="fit") }}
+</div>
 
 Maybe with more development time I would have made the Giant Chicken Form the way I wanted but in the end I'm happy with what I've achieved.
 
@@ -25,7 +27,9 @@ Maybe with more development time I would have made the Giant Chicken Form the wa
 
 The final version of the Controller is based solely on the Leader-Follower Mode. It works through a Singleton, the HiveMind that is being controlled by the HiveController. The HiveMind then relays all its inputs to the available leaders and they do the same with their followers.
 
-{{ resize_image(path="static/images/emperors_quest/hive_diagram.png", width=1000, height=1000, op="fit") }}
+<div class = "gallery">
+{{ solo_image(path="static/images/emperors_quest/hive_diagram.png", width=1000, height=1000, op="fit") }}
+</div>
 
 A HiveMember can change Behaviour at any time with any other Behaviour using common methods.
 
@@ -57,7 +61,9 @@ Probably this isn't the most effective way to do this but it works and solves ma
 
 To describe the modes in which a Member can change Behaviour, I synthesized all possible cases in 4 events described by this diagram. This helped me tackle the code and implementation of such system.
 
-{{ resize_image(path="static/images/emperors_quest/members_transformation_diagram.png", width=1000, height=1000, op="fit") }}
+<div class = "gallery">
+{{ solo_image(path="static/images/emperors_quest/members_transformation_diagram.png", width=1000, height=1000, op="fit") }}
+</div>
 
 <div class = "gallery">
 <img class = "gallery-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDhjYjdhdWlvNG1vOHA3Zmhib2d4YWF5ODBjdnFzamhyMm90bTVkMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0sJYf4X0cfKwkOieIG/giphy.gif">

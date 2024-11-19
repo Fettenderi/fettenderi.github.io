@@ -1,12 +1,24 @@
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex;              /* Usa flexbox */
+    flex-wrap: wrap;           /* Permetti il wrap per le cards */
+    gap: 5px;                 /* Spaziatura tra le cards */
+    justify-content: center;    /* Centra le cards orizzontalmente */
+
 }
 
 .gallery-gif,
 .gallery-image,
 .gallery-video {
+    flex-grow: 1;
+    border-color: transparent;
+    border-radius: 5px;
+    margin: 0.2rem;
+    flex: 1 0 1000px;           /* Non far crescere o restringere le cards, larghezza fissa di 200px */
+    max-width: 500px;          /* Limita la larghezza massima delle cards */
+    max-height: 600px;          /* Limita la larghezza massima delle cards */
+}
+
+.solo-image {
     flex-grow: 1;
     border-color: transparent;
     border-radius: 5px;
@@ -18,8 +30,21 @@
 }
 
 .text-button {
-    border: solid;
-    border-width: 100%;
-    border-color: var(--primary-color);
-    padding: 0.6rem 15% 0.6rem 15%;
+    display: inline-block;       /* Assicura che il link venga trattato come un blocco per il centraggio */
+    border: 3px solid;          /* Imposta uno spessore di 3px per il bordo */
+    border-color: var(--primary-color); /* Colore del bordo */
+    border-radius: 10px;         /* Rende i bordi leggermente arrotondati */
+    padding: 0.6rem 15%;        /* Spaziatura interna */
+    text-align: center;         /* Centra il testo nel bottone */
+    margin: 0 auto;             /* Centra il bottone rispetto al genitore */
+    text-decoration: none;      /* Rimuove la sottolineatura */
+    color: var(--primary-color); /* Colore del testo */
+    background-color: transparent; /* Sfondo trasparente */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2em 0;
 }

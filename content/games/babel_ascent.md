@@ -23,7 +23,7 @@ The game was developed for the [1-BIT JAM #4](https://itch.io/jam/1-bit-jam-4) a
 To quickly create models while also achieving a unique art style, I worked on a dithering shader, heavily inspired by Return of the Obra Dinn, though not quite at the same level. I implemented two GLSL shaders using the new CompositorEffect feature of Godot 4.3.
 
 <div class = "gallery">
-{{ resize_image(path="static/images/babel_ascent/aesthetics.png", width=1030, height=500, op="fill")}}
+{{ solo_image(path="static/images/babel_ascent/aesthetics.png", width=1000, height=1000, op="fill")}}
 </div>
 
 The first shader was needed for the dithering and edge detection.
@@ -153,15 +153,15 @@ Initially, we had the cannon and the crossbow in mind as weapons, and the player
 The cannon deals a huge amount of damage, but charging it is time-consuming. The crossbow is easy to use for long-range attacks but deals low damage. While working on that, I came up with the idea of the harp, a fun and unique weapon. When all strings are touched in the correct order a note is shot. It's a short-range weapon that deals decent damage.
 
 <div class = "gallery">
-{{ resize_image(path="static/images/babel_ascent/0_94.jpg", width=1000, height=1000, op="fill")}}
-{{ resize_image(path="static/images/babel_ascent/0_97.jpg", width=1000, height=1000, op="fill")}}
-{{ resize_image(path="static/images/babel_ascent/0_93.jpg", width=1000, height=1000, op="fill")}}
+{{ gallery_image(path="static/images/babel_ascent/0_94.jpg", width=1000, height=1000, op="fill")}}
+{{ gallery_image(path="static/images/babel_ascent/0_97.jpg", width=1000, height=1000, op="fill")}}
+{{ gallery_image(path="static/images/babel_ascent/0_93.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
 After some time spent fixing bugs and other mechanics, we introduced close-range weapons, such as the brick, which can be thrown and deals low damage, and the hammer, which is also throwable and can be used for long-range attacks. However, aiming is a bit difficult in a VR game, so to reward the player when thay hit an enemy with it we created an upgraded version of the hammer. When an enemy is hit, all enemies within a certain distance from it get stunned for a short time.
 
 <div class = "gallery">
-{{ resize_image(path="static/images/babel_ascent/0_92.jpg", width=1000, height=1000, op="fill")}}
+{{ solo_image(path="static/images/babel_ascent/0_92.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
 # The Lurking Merchant
@@ -169,13 +169,13 @@ After some time spent fixing bugs and other mechanics, we introduced close-range
 We wanted a mysterious-looking figure to sell you all the weapons and upgrades, to reinforce the theme of a corrupted ascent. He comes in between fights and will offer the player different items that can be purchased using orbs of light dropped by the enemies. 
 
 <div class = "gallery">
-{{ resize_image(path="static/images/babel_ascent/0_98.jpg", width=1000, height=1000, op="fill")}}
+{{ solo_image(path="static/images/babel_ascent/0_98.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
 When an item is chosen, light will be removed from the scale and the merchant will let you know he's ready to seal the deal through a handshake.
 
 <div class = "gallery">
-{{ resize_image(path="static/images/babel_ascent/0_99.jpg", width=1000, height=1000, op="fill")}}
+{{ solo_image(path="static/images/babel_ascent/0_99.jpg", width=1000, height=1000, op="fill")}}
 </div>
 
 If you have a VR headset and at least a GeForce GTX 1660 Ti you can run it!

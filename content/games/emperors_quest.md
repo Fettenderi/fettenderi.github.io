@@ -20,9 +20,9 @@ The analysis of the game is divided into 4 core parts:
 If you want to see Kendal's reaction to the game [click here](https://www.youtube.com/watch?v=2S3NR6Hu13Y).
 
 <div class = "gallery">
-{{ resize_image(path="static/images/emperors_quest/image1.png", width=230, height=200, op="fill")}}
-{{ resize_image(path="static/images/emperors_quest/image2.png", width=230, height=200, op="fill")}}
-{{ resize_image(path="static/images/emperors_quest/image3.png", width=230, height=200, op="fill")}}
-{{ resize_image(path="static/images/emperors_quest/image4.png", width=230, height=200, op="fill")}}
+{{ gallery_image(path="static/images/emperors_quest/image1.png", width=1000, height=1000, op="fill")}}
+{{ gallery_image(path="static/images/emperors_quest/image2.png", width=1000, height=1000, op="fill")}}
+{{ gallery_image(path="static/images/emperors_quest/image3.png", width=1000, height=1000, op="fill")}}
+{{ gallery_image(path="static/images/emperors_quest/image4.png", width=1000, height=1000, op="fill")}}
 </div>
 
