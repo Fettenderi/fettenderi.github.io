@@ -5,7 +5,7 @@ date = "2021-05-22"
 weight = 2
 
 [extra]
-tags=["godot-engine", "solo", "bullet-hell"]
+tags=["godot-engine", "solo", "bullet-hell", "github"]
 local_image = "/games/time_tangled.png"
 +++
 <div class = "gallery">
@@ -18,4 +18,7 @@ I’m proud of how the game turned out, complete with power-ups, a diverse range
 
 One feature I particularly enjoyed designing was the scoring system, which constantly encourages players to push for a higher score. And, for those up to the challenge, there’s a special reward for anyone who can surpass my personal best of 59,610. Give it a try if you're up for it!
 
+<div class="button-container">
 {{ add_button(path="https://fettenderi.itch.io/time-tangled", text="Try it!") }}
+{{ add_button(path="https://github.com/Fettenderi/Time-Tangled", text="Source Code") }}
+</div>

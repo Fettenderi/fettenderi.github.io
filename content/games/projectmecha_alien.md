@@ -5,7 +5,7 @@ date = "2023-07-20"
 weight = 3
 
 [extra]
-tags=["godot-engine", "team", "3d", "technical-designer"]
+tags=["godot-engine", "team", "3d", "technical-designer", "github"]
 local_image = "/games/projectmecha_alien.png"
 ignore = true
 +++
@@ -34,4 +34,7 @@ Despite the challenges, I really enjoyed working with my teammate [Unconscious M
 
 The game is rough around the edges, but it's still playable, give it a try.
 
+<div class="button-container">
 {{ add_button(path="https://fettenderi.itch.io/projectmecha-alien", text="Try it!") }}
+{{ add_button(path="https://github.com/Fettenderi/ProjectMecha-Alien", text="Source Code") }}
+</div>

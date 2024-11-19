@@ -1,5 +1,5 @@
 +++
-title = "Emperor's Quest: Engine Designing Tools"
+title = "Emperor's Quest: Engine Tools"
 +++
 
 # Enemies:

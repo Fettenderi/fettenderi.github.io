@@ -24,7 +24,9 @@ Here's my [Planet Minecraft Page](https://www.planetminecraft.com/member/fettend
 
 The concept for this video revolved around an escalating display of different TNT types, showcasing their power from the smallest to the most massive explosions. Each TNT was set in a unique environment, chosen either to reflect its origin or to highlight the setting where it’s most commonly used. This approach not only made the explosions more entertaining but also visually emphasized their impact, immersing viewers in the distinctiveness of each blast.
 
+<div class="button-container">
 {{ add_button(path="https://www.planetminecraft.com/project/an-explosive-journey/", text="Try it!") }}
+</div>
 
 <div class = "gallery">
 {{ gallery_image(path="static/images/minecraft/an_explosive_journey/image8.png", width=1000, height=1000, op="fit")}}
@@ -46,7 +48,9 @@ The concept for this video revolved around an escalating display of different TN
 
 The concept for this map was to showcase an array of creative ways to "eliminate" friends in Minecraft, utilizing as many different mechanics as possible. I set the action within a laboratory where friends act as test dummies, facing a variety of inventive takedowns. The laboratory itself is composed of interconnected rooms linked by doors that defy Euclidean geometry, a subtle twist that adds an extra layer of intrigue with each room transition. Like the first project, this one follows an escalation pattern, using an ideal interest curve to strategically sequence each “elimination” for maximum impact and engagement.
 
+<div class="button-container">
 {{ add_button(path="https://www.planetminecraft.com/project/friendlyfire/", text="Try it!") }}
+</div>
 
 <div class = "gallery">
 {{ gallery_image(path="static/images/minecraft/friendly_fire/image1.png", width=1000, height=1000, op="fit")}}
@@ -73,8 +77,9 @@ The concept for this map was to showcase an array of creative ways to "eliminate
 </div>
 
 To promote a new book release, I was tasked with creating a map inspired by the book's adventures. The story follows the protagonist on a journey through various eras, each with a unique setting, as they seek to reunite with their doppelgangers from specific periods. Each environment is vividly described in the book, and my role was to bring these settings to life within the game world. The challenges I designed for each era broadly reflect the events of the book, allowing players to experience the key moments of the protagonist’s quest across time in an interactive way.
-
+<div class="button-container">
 {{ add_button(path="https://www.planetminecraft.com/project/across-time-and-space/", text="Try it!") }}
+</div>
 
 <div class = "gallery">
 {{ gallery_image(path="static/images/minecraft/across_time_and_space/image1.png", width=1000, height=1000, op="fit")}}

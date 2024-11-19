@@ -30,21 +30,32 @@
 }
 
 .text-button {
-    display: inline-block;       /* Assicura che il link venga trattato come un blocco per il centraggio */
-    border: 3px solid;          /* Imposta uno spessore di 3px per il bordo */
+    display: inline-block;       /* Assicura che il link venga trattato come un blocco */
+    border: 3px solid;           /* Spessore del bordo */
     border-color: var(--primary-color); /* Colore del bordo */
-    border-radius: 10px;         /* Rende i bordi leggermente arrotondati */
-    padding: 0.6rem 15%;        /* Spaziatura interna */
-    text-align: center;         /* Centra il testo nel bottone */
-    margin: 0 auto;             /* Centra il bottone rispetto al genitore */
-    text-decoration: none;      /* Rimuove la sottolineatura */
+    border-radius: 10px;         /* Arrotonda i bordi */
+    padding: 0.6rem 2rem;        /* Spaziatura interna */
+    width: 25vw;
+    height: 6vh;
+    align-content: center;
+    text-align: center;          /* Centra il testo */
+    text-decoration: none;       /* Rimuove la sottolineatura */
     color: var(--primary-color); /* Colore del testo */
     background-color: transparent; /* Sfondo trasparente */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Aggiunge animazioni */
+}
+
+.text-button:hover {
+    background-color: var(--primary-color); /* Colore di sfondo al passaggio del mouse */
+    color: var(--hover-color); /* Colore del testo invertito */
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.2em 0;
+    display: flex;               /* Usa Flexbox */
+    flex-wrap: wrap;             /* Permette il wrapping su più righe */
+    justify-content: space-evenly;     /* Centra i bottoni orizzontalmente */
+    align-items: center;         /* Centra verticalmente */
+    gap: 16px;                   /* Spaziatura uniforme tra i bottoni */
+    margin: 1.2em 0;             /* Margine verticale */
 }
+
