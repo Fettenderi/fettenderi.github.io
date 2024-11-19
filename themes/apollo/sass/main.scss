@@ -32,12 +32,9 @@ html {
 .content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 4em;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: clamp(1em, 2vw, 4em);
+  padding-right: clamp(1em, 2vw, 4em);
   word-wrap: break-word;
-}
-
-@media (max-width: 1100px) {
-  .content {
-      padding: 0 1em;
-  }
 }

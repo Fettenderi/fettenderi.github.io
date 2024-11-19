@@ -46,8 +46,19 @@ html {
         align-items: center;
         justify-content: center;
     }
-
+    
+    .gallery-gif,
+    .gallery-image,
+    .gallery-video {
+        flex-grow: 1;
+        border-color: transparent;
+        border-radius: 5px;
+        margin: 0.2rem;
+        flex: 1 0 100px;           /* Non far crescere o restringere le cards, larghezza fissa di 200px */
+        width: 100%;          /* Limita la larghezza massima delle cards */
+    }
 }
+
 
 @media all and (min-width: 640px) {
     .cards {
