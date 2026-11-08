@@ -1,0 +1,4 @@
+Per buildare il sito markdown: zola serve
+Per compilare gli script TypeScript: npm run watch:js
+
+In produzione (credo di dover cambiare la gitaction): npm run build:js && zola build

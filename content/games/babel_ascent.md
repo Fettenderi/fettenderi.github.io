@@ -64,6 +64,8 @@ To solve that issue I worked on a posterization and dithering effect heavily ins
 
 The original idea was to gradually change the two colors during gameplay to convey intensity whenever the enemy got nearer or the enemies were too much. The idea was left unimplemented for lack of time, but in some capacity the dynamic soundtrack already helps with that goal. 
 
+// Modificare il file TS e far si che i passaggi vengano applicati uno dopo l'altro in modo sensato, output di 1 = input di 2 etc
+
 <script type="module" src="/js/babel_ascent_shader_embed.js"></script>
 <div class = "gallery" id = "shader">
 {{ solo_image(path="static/images/babel_ascent/aesthetics_frame.png", width=1000, height=1000, op="fit")}}
