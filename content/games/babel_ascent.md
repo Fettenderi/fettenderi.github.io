@@ -34,7 +34,7 @@ At each level of progression the hordes of enemies will be composed of different
 To achieve many diverse movement patterns I created a modular system based on a few mathematical functions that I could use during the design to achieve my desired outcome. Some combinations were quite bizzare and behaved in funky ways but I'm still proud of this.
 
 <div class = "gallery">
-{{ solo_image(path="static/images/babel_ascent/modular-movement-system.png", width=1586, height=538, op="fit")}}
+{{ solo_image(path="static/images/babel_ascent/modular-movement-system.png", width=1605, height=707, op="fit")}}
 </div>
 
 <div class="button-container">
