@@ -2,6 +2,13 @@ $black: #2A2A2B;
 $white: #F7EEDC;
 
 :root.dark {
+  --strong-color: #ffd27f;
+  --em-color: #9ad1d4;
+  --strong-em-color: #e0b0ff;
+
+  --code-bg: #1e1e1f;
+  --code-border: #6a6a6c;
+
   --text-0: #{$white};
   --text-1: #{$white};
   --primary-color: #{$white};

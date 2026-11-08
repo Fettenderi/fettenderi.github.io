@@ -12,6 +12,13 @@ $primary-color: #EF9A03;
 $accent-color: #e3a049;
 
 :root.dark {
+  --strong-color: #ffb454;
+  --em-color: #8ecae6;
+  --strong-em-color: #d6a6ff;
+
+  --code-bg: #000000;
+  --code-border: #4b5170;
+
   --text-0: #{$text};
   --text-1: #{$text};
   --primary-color: #{$primary-color};

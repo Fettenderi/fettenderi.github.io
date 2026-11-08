@@ -83,11 +83,15 @@ code {
 }
 
 pre {
-    background-color: var(--bg-primary) !important;
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--code-border);
     border-radius: 5px;
-    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    width: 90%;
+    max-height: 90vh;
+    margin: 1em auto;
     line-height: 1.4;
-    overflow-x: auto;
+    overflow: auto;
     padding: 1em;
     position: relative;
 

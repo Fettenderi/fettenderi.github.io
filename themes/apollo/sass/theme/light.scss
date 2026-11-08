@@ -11,6 +11,13 @@ $primary-color: #E3A049;
 $accent-color: #EF9A03;
 
 :root.light {
+  --strong-color: #a63d00;
+  --em-color: #1f5f8b;
+  --strong-em-color: #7a2e8a;
+
+  --code-bg: #ebe5d4;
+  --code-border: #d0c9b6;
+
   --text-0: #{$text};
   --text-1: #{$text};
 

@@ -5,7 +5,7 @@ date = "2024-05-27"
 weight = 5
 
 [extra]
-tags=["godot-engine", "solo", "gameplay-design", "system-design"]
+tags=["godot", "solo", "gameplay-design", "system-design"]
 local_image = "/games/emperors_quest.png"
 +++
 
@@ -15,7 +15,7 @@ The analysis of the game is divided into 4 core parts:
 
 <div class="button-container">
 {{ add_button(path="/games/emperors_quest/level-design", text="Level Design") }}
-{{ add_button(path="/games/emperors_quest/gameply-design", text="Gameplay Design") }}
+{{ add_button(path="/games/emperors_quest/gameplay-design", text="Gameplay Design") }}
 {{ add_button(path="/games/emperors_quest/system-design", text="System Design") }}
 {{ add_button(path="/games/emperors_quest/engine-tools", text="Engine Tools") }}
 </div>

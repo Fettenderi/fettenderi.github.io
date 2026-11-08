@@ -6,13 +6,13 @@ weight = 6
 
 [extra]
 local_image = "/games/babel_ascent.png"
-tags=["godot-engine", "team", "lead-designer", "technical-gameplay-designer", "vr", "shader", "github"]
+tags=["godot", "team", "lead-designer", "technical-design", "vr", "shader"]
 babel = true
 +++
 
 <div class = "gallery">
-<iframe width="400" height="225" class ="gallery-video" src="https://www.youtube.com/embed/gEMYtLm-8uY?si=rjLIaHoLB0D_y3Nd" title="Babel Ascent Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="400" height="225" class ="gallery-video" src="https://www.youtube.com/embed/StAaA7DYxMg?si=MtQHS2mt9SeBrxY8" title="Babel Ascent Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="400" height="225" class ="gallery-video" src="https://www.youtube.com/embed/gEMYtLm-8uY" title="Babel Ascent Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="400" height="225" class ="gallery-video" src="https://www.youtube.com/embed/StAaA7DYxMg" title="Babel Ascent Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 This is my third team project and the first one where I was the wearing the lead designer hat. However I was pretty confident on my ability to guide my teammates, the composer [UnconsciousMotifs](https://unconscious-motifs.itch.io) and SFX designer [BatFerro](https://itch.io/profile/andrea-ferretti), given the amount of synergy we already have acquired together.
@@ -31,11 +31,15 @@ Can be easily explained like this:
 ## The enemies
 At each level of progression the hordes of enemies will be composed of different kinds angels. Each of them with a different movement pattern.
 
-// Inserire immagine dei vari angeli e del pattern di movimento sovraimposto
+To achieve many diverse movement patterns I created a modular system based on a few mathematical functions that I could use during the design to achieve my desired outcome. Some combinations were quite bizzare and behaved in funky ways but I'm still proud of this.
 
-To achieve these diverse movement patterns I created a modular system based on a few mathematical functions that I could use during the design to achieve my desired outcome. Some combinations were quite bizzare and behaved in funky ways but I'm still proud of this.
+<div class = "gallery">
+{{ solo_image(path="static/images/babel_ascent/modular-movement-system.png", width=1586, height=538, op="fit")}}
+</div>
 
-// Inserire immagine del sistema modulare per la creazione dei movement pattern
+<div class="button-container">
+{{ add_button(path="https://github.com/Fettenderi/Babel-Ascent/tree/port-4.4/scripts/movement_modules", text="Read the code") }}
+</div>
 
 ## The weapons
 At each encounter with the merchant you could purchase one or more weapons and upgrades.
@@ -59,17 +63,21 @@ These weapons all have problems, some clash with the enemy design, others involv
 We were on a really strinct schedule, only 2 weeks, and in the team I was the only one with some sort of modelling and graphical skills, so we had really little time to create complex models and textures. We also had to stay within the rules of the jam, so we needed to only have 2 colors.
 
 To solve that issue I worked on a posterization and dithering effect heavily inspired by Return of the Obra Dinn. This art style is achieved using two GLSL shaders:
-- Layer 1: Downsampling, 1-bit posterization using luminescence, and ordered dithering.
-- Layer 2: Paletteswapping
-
-The original idea was to gradually change the two colors during gameplay to convey intensity whenever the enemy got nearer or the enemies were too much. The idea was left unimplemented for lack of time, but in some capacity the dynamic soundtrack already helps with that goal. 
-
-// Modificare il file TS e far si che i passaggi vengano applicati uno dopo l'altro in modo sensato, output di 1 = input di 2 etc
+- Shader 1: Downsampling, Depth-based edge detection, 1-bit posterization using luminescence, and ordered dithering.
+- Shader 2: Paletteswapping
 
 <script type="module" src="/js/babel_ascent_shader_embed.js"></script>
 <div class = "gallery" id = "shader">
-{{ solo_image(path="static/images/babel_ascent/aesthetics_frame.png", width=1000, height=1000, op="fit")}}
+{{ solo_image(path="static/images/babel_ascent/shader-preview.png", width=1024, height=512, op="fit")}}
 </div>
+
+<div class="button-container">
+{{ add_button(path="https://github.com/Fettenderi/Babel-Ascent/tree/main/post_processing", text="Read the code") }}
+</div>
+
+The original idea was to gradually change the two colors during gameplay to convey intensity whenever the enemy got nearer or the enemies were too much. The idea was left unimplemented for lack of time, but in some capacity the dynamic soundtrack already helps with that goal. 
+
+Altough on a flatscreen the effect may seem dizzying, I think I found the right balance as to not make it annoying, so in VR it feels really nice.
 
 If you have a VR headset and at least a GeForce GTX 1660 Ti you can run it!
 

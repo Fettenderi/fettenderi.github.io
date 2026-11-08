@@ -26,11 +26,11 @@ interface Uniforms {
 }
 
 const STAGE_LABELS: readonly string[] = [
-    "Frame originale",
-    "Downsampling",
+    "Original",
+    "Downsampled",
     "Edge detection",
-    "1-bit posterization",
-    "Ordered Dithering",
+    "Posterized",
+    "Dithered",
     "Paletteswapped",
 ];
 
@@ -40,8 +40,8 @@ function hexToRgb(hex: string): RGB {
 }
 
 const CONFIG: Config = {
-    selector: ".gallery#shader",
-    downscale: 3,
+    selector: "#shader",
+    downscale: 2,
     edgeThickness: 0.002,
     edgeGain: 1.0,
     threshold: 0.5,

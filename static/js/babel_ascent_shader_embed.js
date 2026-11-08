@@ -14,11 +14,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
 var require_babel_ascent_shader_embed = __commonJS({
   "js/babel_ascent_shader_embed.ts"() {
     var STAGE_LABELS = [
-      "Frame originale",
-      "Downsampling",
+      "Original",
+      "Downsampled",
       "Edge detection",
-      "1-bit posterization",
-      "Ordered Dithering",
+      "Posterized",
+      "Dithered",
       "Paletteswapped"
     ];
     function hexToRgb(hex) {
@@ -26,8 +26,8 @@ var require_babel_ascent_shader_embed = __commonJS({
       return [(value >> 16 & 255) / 255, (value >> 8 & 255) / 255, (value & 255) / 255];
     }
     var CONFIG = {
-      selector: ".gallery#shader",
-      downscale: 3,
+      selector: "#shader",
+      downscale: 2,
       edgeThickness: 2e-3,
       edgeGain: 1,
       threshold: 0.5,

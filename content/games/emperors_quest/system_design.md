@@ -70,9 +70,6 @@ To describe the modes in which a Member can change Behaviour, I synthesized all 
 </div>
 
 ## Case Study: LeaderHiveBehaviour
-
-{{ note(header="Very long code block!", body="The following section is a very long chunk of code, if you couldn't handle the first one don't go forwards. If you are into this, go for it, it's far from perfect but it may be interesting to look at idunno.") }}
-
 ``` gd, linenos, hl_lines = 48-52 57-61
 class_name LeaderHiveBehaviour
 extends HiveBehaviour

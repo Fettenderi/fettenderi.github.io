@@ -29,3 +29,19 @@
   src: url('fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf'), local('ttf');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Jetbrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/JetbrainsMono/JetBrainsMono-Italic.ttf'), local('ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jetbrains Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/JetbrainsMono/JetBrainsMono-BoldItalic.ttf'), local('ttf');
+  font-display: swap;
+}

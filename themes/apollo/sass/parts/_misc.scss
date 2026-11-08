@@ -103,3 +103,23 @@ del {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+strong,
+b {
+  font-weight: 700;
+  color: var(--strong-color);
+}
+
+em,
+i:not(#text) {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--em-color);
+}
+
+strong em,
+em strong,
+b i,
+i b {
+  color: var(--strong-em-color);
+}
