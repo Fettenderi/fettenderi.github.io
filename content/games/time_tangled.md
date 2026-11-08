@@ -7,6 +7,7 @@ weight = 2
 [extra]
 tags=["godot-engine", "solo", "bullet-hell", "github"]
 local_image = "/games/time_tangled.png"
+ignore = true
 +++
 <div class = "gallery">
 <iframe width="400" height="225" src="https://www.youtube.com/embed/rH-SM4XfNYA?si=nbVSHw2G1axhkvUS" title="Time Tangled Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

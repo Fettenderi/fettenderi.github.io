@@ -1,0 +1,25 @@
+{
+  "name": "fettenderi.github.io",
+  "version": "1.0.0",
+  "description": "is my portfolio website, where I showcase my most significant projects. The site focuses on Technical Game Design, along with custom Minecraft experience design, highlighting unique mechanics and immersive environments.",
+  "main": "index.js",
+  "scripts": {
+    "build:js": "esbuild js/babel_ascent_shader_embed.ts --bundle --format=esm --target=es2020 --minify --outfile=static/js/babel_ascent_shader_embed.js",
+    "watch:js": "esbuild js/babel_ascent_shader_embed.ts --bundle --format=esm --target=es2020 --outfile=static/js/babel_ascent_shader_embed.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fettenderi/fettenderi.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fettenderi/fettenderi.github.io/issues"
+  },
+  "homepage": "https://github.com/Fettenderi/fettenderi.github.io#readme",
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
