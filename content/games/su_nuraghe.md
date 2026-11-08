@@ -20,7 +20,7 @@ Let's start from the beginning, the team was composed by these people:
 - [Vittoria Vignolini (Vivi)](https://lacasadovevivi.itch.io): Illustrator Concept Artist
 - [Achille Ferrari (coca.cola)](https://itch.io/profile/achillebus): 3D Modeller
 
-and me as _programmer, general designer and lead_. I was already accustomed with many of the people in the team so it wasn't really difficult the collaboration part, all the asset creation, organizzation, delivery and implementation went pretty smoothly. However the weight of my three hats started to become a real issue.
+and me as _programmer, tech artist, general designer and lead_. I was already accustomed with many of the people in the team so it wasn't really difficult the collaboration part, all the asset creation, organizzation, delivery and implementation went pretty smoothly. However the weight of my three hats started to become a real issue.
 
 # The idea
 A first person horror game where you explore an alien nuraghe. The place is filled with mamuthones, tipical sardininan masks all wearing goat fur, huge bells on their back and a wood handcrafted mask.
@@ -98,6 +98,14 @@ In this circumstance, the player will _need to mimic_ the mamuthones moves in a 
 </div>
 
 According to _playtester_ this was the _most interesting part_ of the experience, I agree with them, however some of them actually get bored or frustrated way before arriving to this section...
+
+# Aesthetics
+
+We were really inspired by _PS1 graphics_ for this one, the principle for the shader is pretty analogous to the one used for [Babel Ascent](/games/babel-ascent) but written way more clearly. There are two GLSL shaders that compile into Compositor Effects, the first one _downsamples_ the frame and the second one performs _16-bit posterization_ and _dithering_.
+
+<div class="button-container">
+{{ add_button(path="https://github.com/Fettenderi/SuNuraghe/tree/main/assets/post_processing", text="Read the code") }}
+</div>
 
 # Postmortem
 
