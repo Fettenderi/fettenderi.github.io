@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<html class="dark light">
+<html lang="en" class="dark light">
+  <head>
+    {% if config.extra.favicon %}
+      <link rel="icon" type="image/png" href={{ config.extra.favicon }} />
+    {% endif %}
 
-<head>
-  <title>Screensaver</title>
-<style>
-  html, body {
-    margin: 0;
-    height: 100%;
-    background: #000;
-    overflow: hidden;
-    cursor: none;
-  }
-  canvas {
-    display: block;
-  }
-</style>
-</head>
-<body>
-  <canvas id="fx">
-  </canvas>
-  <script type="module" src="/js/screensaver.js"></script>
-</body>
-
+    <title>Screensaver</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: #000;
+        overflow: hidden;
+        cursor: none;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="fx"></canvas>
+    <script type="module" src="/js/screensaver.js"></script>
+  </body>
 </html>
