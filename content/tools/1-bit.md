@@ -5,9 +5,7 @@ date = "2024-10-11"
 weight = 6
 
 [extra]
-local_image = "/games/babel_ascent.png"
 tags=["typescript"]
-babel = true
 ignore = true
 +++
 
